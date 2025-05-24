@@ -64,6 +64,13 @@ body {
   align-items: center;
 }
 
+.header__button:hover {
+  background-color: var(--color-white);
+  color: #1b1b1b;
+  border: solid 1px var(--color-white);
+  transition: background 0.3s;
+}
+
 h1 {
   display: flex;
   color: var(--color-white);
@@ -73,6 +80,7 @@ h1 {
   text-align: left;
   padding-top: 416px;
   margin: 40px auto;
+  text-transform: uppercase
 }
 
 .form-container {
