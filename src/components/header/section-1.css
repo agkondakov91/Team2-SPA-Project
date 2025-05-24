@@ -1,0 +1,191 @@
+:root {
+  --color-white: #ffffff;
+  --color-grey: #E1E3E4;
+  --color-white-70: rgba(255, 255, 255, 0.7);
+  --font-size-base: 16px;
+  --padding-md: 12px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+}
+
+body {
+  background-image: url("../../images/raster/Rectangle 1.jpg");
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  color: var(--color-white);
+  margin: 0 0;
+  padding: 10px;
+  font-size: 18px;
+  max-width: 1180px;
+}
+
+.header__logo,
+.header__title {
+  flex-direction: row;
+  align-items: center;
+  margin-left: 250px;
+  margin-right: 70px;
+}
+
+.header__nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 80px;
+  padding: 0 24px;
+  gap: 40px;
+}
+
+.header__list {
+  white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+}
+
+.header__button {
+  margin-left: 32px;
+  background-color: #1A3E3E;
+  color: var(--color-white);
+  border: none;
+  border-radius: 5px;
+  padding: var(--padding-md) 24px;
+  cursor: pointer;
+  width: 160px;
+  font-size: 18px;
+  align-items: center;
+}
+
+.header__button:hover {
+  background-color: var(--color-white);
+  color: #1b1b1b;
+  border: solid 1px var(--color-white);
+  transition: background 0.3s;
+}
+
+h1 {
+  display: flex;
+  color: var(--color-white);
+  font-size: 50px;
+  max-width: 1180px;
+  margin: auto;
+  text-align: left;
+  padding-top: 416px;
+  margin: 40px auto;
+  text-transform: uppercase
+}
+
+.form-container {
+  position: relative;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 0 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  backdrop-filter: blur(8px);
+  max-width: 1180px;
+  height: 160px;
+
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 220px;
+}
+
+.form__label {
+  color: var(--color-grey);
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.form__input,
+.form__select,
+.form__date {
+  background: transparent;
+  border: 2px solid var(--color-grey);
+  color: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: var(--padding-md);
+  font-size: var(--font-size-base);
+}
+
+.form__input::placeholder,
+.form__select,
+.form__date {
+  color: var(--color-grey);
+}
+
+.form__hint {
+  color: var(--color-grey);
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.form__button {
+  background: var(--color-white);
+  color: #1b1b1b;
+  padding: 16px 32px;
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-bottom: 15px;
+}
+
+.form__button:hover {
+  background: #1A3E3E;
+  color: var(--color-white);
+  border: solid 1px var(--color-white);
+}
+
+.form__date-range {
+  display: flex;
+  gap: -1px;
+}
+
+.form__date-range-wrapper {
+  display: flex;
+  border: 2px solid var(--color-grey);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: transparent;
+}
+
+.form__date {
+  background: transparent;
+  color: var(--color-grey);
+  padding: 12px 5px;
+  font-size: var(--font-size-base);
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.input-left {
+  border-right: none;
+}
+
+.input-right {
+  border-left: none;
+}
+
+.form__date::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
