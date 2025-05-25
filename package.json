@@ -2,6 +2,7 @@
   "name": "team2-spa-project",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "dev": "npm-run-all --parallel json-server wait-for-server",
