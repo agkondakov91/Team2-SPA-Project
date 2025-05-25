@@ -61,16 +61,14 @@ div {
         box-sizing: border-box;
     }
     .container {
-        max-width: 1197px;
+        margin: 0 auto;
         padding: 0 10px;
-        height: 734px;
-        box-sizing: border-box;
+        max-width: 1197px;
     }
     .wrapper {
-        height: 734px;
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
         padding: 100px 0;
         gap: 15px;
     }
@@ -79,7 +77,6 @@ div {
         display: flex;
         max-width: 480px;
         height: 534px;
-        padding-right: 180px;
         display: block;
     }
     .img {
@@ -96,9 +93,12 @@ div {
         height: 400px;
         object-fit: cover;
     }
-
     .text-block {
         max-width: 580px;
+    }
+    .video {
+        position: relative;
+        margin: -274px 0 0 130px;
     }
 }
 
