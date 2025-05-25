@@ -1,0 +1,113 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+div {
+    display: block;
+}
+.subtitle {
+    margin: 0 0 8px;
+    font-family: url('/src/fonts/AnyConv.com__NEXT\ ART_Light.woff2');
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 20px;
+    color: #f2be22;
+}
+.title {
+    margin: 0 0 40px;
+    font-family: url('/src/fonts/NEXT\ ART_Bold.woff');
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 120%;
+    color: #18121e;
+}
+.text {
+    margin: 0 0 40px;
+    font-family: url('/src/fonts/AnyConv.com__NEXT\ ART_Regular.woff2');
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: #18121e;
+}
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #1a3e3e;
+    border-radius: 4px;
+    padding: 0;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: .192px;
+    color: #fdfdfd;
+    background: #1a3e3e;
+    transition: all .3s;
+    cursor: pointer;
+}
+.btn-tour {
+    width: 200px;
+    height: 52px;
+}
+
+@media (min-width: 1101px) {
+    .section-2 {
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+        height: 734px;
+        box-sizing: border-box;
+    }
+    .container {
+        max-width: 1197px;
+        padding: 0 10px;
+        height: 734px;
+        box-sizing: border-box;
+    }
+    .wrapper {
+        height: 734px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 100px 0;
+        gap: 15px;
+    }
+
+    .media {
+        display: flex;
+        max-width: 480px;
+        height: 534px;
+        padding-right: 180px;
+        display: block;
+    }
+    .img {
+        width: 350px;
+        height: 400px;
+        border-radius: 24px;
+    }
+    .img-1 {
+        width: 350px;
+        height: 400px;
+    }
+    .img-2 {
+        width: 350px;
+        height: 400px;
+        object-fit: cover;
+    }
+
+    .text-block {
+        max-width: 580px;
+    }
+}
+
+
+
+@media (max-width: 994px) {
+
+}
+
+@media (max-width: 576px) {
+
+}
