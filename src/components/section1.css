@@ -9,7 +9,7 @@
 }
 
 body {
-  background-image: url("../../images/raster/Rectangle 1.jpg");
+  background-image: url("../images/raster/Rectangle 1.jpg");
 }
 
 .header {
@@ -142,7 +142,7 @@ h1 {
   padding: 16px 32px;
   font-weight: bold;
   font-size: 18px;
-  border: none;
+  border:  solid 1px var(--color-white);
   border-radius: 4px;
   cursor: pointer;
   transition: background 0.3s;
