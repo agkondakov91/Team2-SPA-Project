@@ -1,0 +1,1 @@
+// functon for getting all data

@@ -9,7 +9,8 @@
 }
 
 body {
-  background-image: url("../images/raster/Rectangle 1.jpg");
+  background-image: url("../images/section1/background-img.jpg");
+  background-repeat: no-repeat;
 }
 
 .header {
@@ -136,7 +137,6 @@ h1 {
 .form__select,
 .form__date {
   color: var(--color-grey);
-  max-width: 270px;
 }
 
 .form__hint {
