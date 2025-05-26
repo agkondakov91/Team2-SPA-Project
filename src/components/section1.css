@@ -14,9 +14,10 @@ body {
 
 .header {
   display: flex;
+  position: relative;
   flex-direction: row;
   color: var(--color-white);
-  margin: 0 0;
+  margin: 0 auto;
   padding: 10px;
   font-size: 18px;
   max-width: 1180px;
@@ -24,10 +25,10 @@ body {
 
 .header__logo,
 .header__title {
+  position: relative;
   flex-direction: row;
   align-items: center;
-  margin-left: 250px;
-  margin-right: 70px;
+  margin: 0 auto;
 }
 
 .header__nav {
@@ -71,6 +72,14 @@ body {
   transition: background 0.3s;
 }
 
+.header__item:hover {
+  color: #F2BE21;
+}
+
+.menu__icon {
+  display: none;
+}
+
 h1 {
   display: flex;
   color: var(--color-white);
@@ -96,8 +105,7 @@ h1 {
   gap: 16px;
   backdrop-filter: blur(8px);
   max-width: 1180px;
-  height: 160px;
-
+  min-height: 160px;
 }
 
 .form__group {
@@ -128,12 +136,15 @@ h1 {
 .form__select,
 .form__date {
   color: var(--color-grey);
+  max-width: 270px;
 }
 
 .form__hint {
   color: var(--color-grey);
   font-size: 14px;
   margin-top: 4px;
+  max-width: 270px;
+  padding-left: 10px;
 }
 
 .form__button {
@@ -141,12 +152,13 @@ h1 {
   color: #1b1b1b;
   padding: 16px 32px;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 16px;
   border:  solid 1px var(--color-white);
   border-radius: 4px;
   cursor: pointer;
   transition: background 0.3s;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
+  max-width: 215px;
 }
 
 .form__button:hover {
@@ -180,12 +192,120 @@ h1 {
 
 .input-left {
   border-right: none;
+  max-width: 270px;
 }
 
 .input-right {
   border-left: none;
+  max-width: 270px;
 }
 
 .form__date::-webkit-calendar-picker-indicator {
   filter: invert(1);
+}
+
+@media (max-width: 1100px) {
+  .header__logo,
+  .header__title {
+    margin: 0;
+  }
+
+  .header__nav {
+   display: none;
+  } 
+
+  h1 {
+    padding-left: 20px;
+  }
+
+  .menu__icon {
+    position: absolute;
+    width: 24px;
+    height: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-top: 20px;
+    right: 0;
+  }
+  
+  .menu__icon span {
+    height: 3px;
+    background-color: white;
+    border-radius: 1px;
+  }
+
+  .form-container {
+    padding-left: 20px;
+  }
+  .form__button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  h1 {
+    padding-top: 270px;
+    padding-left: 40px;
+    font-size: 36px;
+  }
+
+  .form-container {
+    height: 200px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 40px;
+  }
+
+  .form__group {
+    flex: 1 1 48%;
+    min-width: 200px;
+  }
+
+  .form__date {
+    max-width: 212px;
+  }
+
+  .form__label {
+    margin: 0;
+  }
+
+  .form__button {
+    width: 212px;
+    margin-bottom: 14px;
+  }
+
+  .form__select {
+    max-width: 460px;
+  }
+
+  .form__select--participants {
+    max-width: 650px;
+  }
+
+}
+
+@media (max-width: 700px) {
+  .form__group {
+    flex: 1 1 1 48%;
+    min-width: 49%;
+    max-width: 100%;
+  }
+
+  .form__date {
+    max-width: 255px;
+  }
+
+   .form__select {
+    width: 100%;
+  }
+  
+  .form__select--participants {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 577px) {
+  /* для мобильных устройств */
 }
