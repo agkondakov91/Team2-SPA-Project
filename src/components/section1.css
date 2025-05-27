@@ -8,9 +8,13 @@
   --radius-lg: 10px;
 }
 
-body {
+.section1 {
+  height: 944px;
   background-image: url("../images/section1/background-img.jpg");
   background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .header {
@@ -81,7 +85,7 @@ body {
   display: none;
 }
 
-h1 {
+.section1-title {
   display: flex;
   color: var(--color-white);
   font-size: 50px;
