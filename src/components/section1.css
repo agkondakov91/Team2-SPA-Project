@@ -1,11 +1,11 @@
 :root {
-  --color-white: #ffffff;
-  --color-grey: #E1E3E4;
-  --color-white-70: rgba(255, 255, 255, 0.7);
-  --font-size-base: 16px;
-  --padding-md: 12px;
-  --radius-md: 8px;
-  --radius-lg: 10px;
+  --section1-color-white: #ffffff;
+  --section1-color-grey: #E1E3E4;
+  --section1-color-white-70: rgba(255, 255, 255, 0.7);
+  --section1-font-size-base: 16px;
+  --section1-padding-md: 12px;
+  --section1-radius-md: 8px;
+  --section1-radius-lg: 10px;
 }
 
 .section1 {
@@ -17,26 +17,26 @@
   background-size: cover;
 }
 
-.header {
+.section1-header {
   display: flex;
   position: relative;
   flex-direction: row;
-  color: var(--color-white);
+  color: var(--section1-color-white);
   margin: 0 auto;
   padding: 10px;
   font-size: 18px;
   max-width: 1180px;
 }
 
-.header__logo,
-.header__title {
+.section1-header__logo,
+.section1-header__title {
   position: relative;
   flex-direction: row;
   align-items: center;
   margin: 0 auto;
 }
 
-.header__nav {
+.section1-header__nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -46,7 +46,7 @@
   gap: 40px;
 }
 
-.header__list {
+.section1-header__list {
   white-space: nowrap;
   display: flex;
   flex-direction: row;
@@ -57,37 +57,37 @@
   padding: 0;
 }
 
-.header__button {
+.section1-header__button {
   margin-left: 32px;
   background-color: #1A3E3E;
-  color: var(--color-white);
+  color: var(--section1-color-white);
   border: none;
   border-radius: 5px;
-  padding: var(--padding-md) 24px;
+  padding: var(--section1-padding-md) 24px;
   cursor: pointer;
   width: 160px;
   font-size: 18px;
   align-items: center;
 }
 
-.header__button:hover {
-  background-color: var(--color-white);
+.section1-header__button:hover {
+  background-color: var(--section1-color-white);
   color: #1b1b1b;
-  border: solid 1px var(--color-white);
+  border: solid 1px var(--section1-color-white);
   transition: background 0.3s;
 }
 
-.header__item:hover {
+.section1-header__item:hover {
   color: #F2BE21;
 }
 
-.menu__icon {
+.section1-menu__icon {
   display: none;
 }
 
 .section1-title {
   display: flex;
-  color: var(--color-white);
+  color: var(--section1-color-white);
   font-size: 50px;
   max-width: 1180px;
   margin: auto;
@@ -97,7 +97,7 @@
   text-transform: uppercase
 }
 
-.form-container {
+.section1-form-container {
   position: relative;
   margin: 0 auto;
   background: rgba(255, 255, 255, 0.1);
@@ -113,51 +113,51 @@
   min-height: 160px;
 }
 
-.form__group {
+.section1-form__group {
   display: flex;
   flex-direction: column;
   flex: 1;
   min-width: 220px;
 }
 
-.form__label {
-  color: var(--color-grey);
+.section1-form__label {
+  color: var(--section1-color-grey);
   font-weight: bold;
   margin-bottom: 8px;
 }
 
-.form__input,
-.form__select,
-.form__date {
+.section1-form__input,
+.section1-form__select,
+.section1-form__date {
   background: transparent;
-  border: 2px solid var(--color-grey);
-  color: var(--color-white);
-  border-radius: var(--radius-md);
-  padding: var(--padding-md);
-  font-size: var(--font-size-base);
+  border: 2px solid var(--section1-color-grey);
+  color: var(--section1-color-white);
+  border-radius: var(--section1-radius-md);
+  padding: var(--section1-padding-md);
+  font-size: var(--section1-font-size-base);
 }
 
-.form__input::placeholder,
-.form__select,
-.form__date {
-  color: var(--color-grey);
+.section1-form__input::placeholder,
+.section1-form__select,
+.section1-form__date {
+  color: var(--section1-color-grey);
 }
 
-.form__hint {
-  color: var(--color-grey);
+.section1-form__hint {
+  color: var(--section1-color-grey);
   font-size: 14px;
   margin-top: 4px;
   max-width: 270px;
   padding-left: 10px;
 }
 
-.form__button {
-  background: var(--color-white);
+.section1-form__button {
+  background: var(--section1-color-white);
   color: #1b1b1b;
   padding: 16px 32px;
   font-weight: bold;
   font-size: 16px;
-  border:  solid 1px var(--color-white);
+  border:  solid 1px var(--section1-color-white);
   border-radius: 4px;
   cursor: pointer;
   transition: background 0.3s;
@@ -165,64 +165,64 @@
   max-width: 215px;
 }
 
-.form__button:hover {
+.section1-form__button:hover {
   background: #1A3E3E;
-  color: var(--color-white);
-  border: solid 1px var(--color-white);
+  color: var(--section1-color-white);
+  border: solid 1px var(--section1-color-white);
 }
 
-.form__date-range {
+.section1-form__date-range {
   display: flex;
   gap: -1px;
 }
 
-.form__date-range-wrapper {
+.section1-form__date-range-wrapper {
   display: flex;
-  border: 2px solid var(--color-grey);
-  border-radius: var(--radius-lg);
+  border: 2px solid var(--section1-color-grey);
+  border-radius: var(--section1-radius-lg);
   overflow: hidden;
   background: transparent;
 }
 
-.form__date {
+.section1-form__date {
   background: transparent;
-  color: var(--color-grey);
+  color: var(--section1-color-grey);
   padding: 12px 5px;
-  font-size: var(--font-size-base);
+  font-size: var(--section1-font-size-base);
   border: none;
   outline: none;
   width: 100%;
 }
 
-.input-left {
+.section1-section1-input-left {
   border-right: none;
   max-width: 270px;
 }
 
-.input-right {
+.section1-input-right {
   border-left: none;
   max-width: 270px;
 }
 
-.form__date::-webkit-calendar-picker-indicator {
+.section1-form__date::-webkit-calendar-picker-indicator {
   filter: invert(1);
 }
 
 @media (max-width: 1100px) {
-  .header__logo,
-  .header__title {
+  .section1-header__logo,
+  .section1-header__title {
     margin: 0;
   }
 
-  .header__nav {
+  .section1-header__nav {
    display: none;
   } 
 
-  h1 {
+  .section1-title {
     padding-left: 20px;
   }
 
-  .menu__icon {
+  .section1-menu__icon {
     position: absolute;
     width: 24px;
     height: 18px;
@@ -234,70 +234,70 @@
     right: 0;
   }
   
-  .menu__icon span {
+  .section1-menu__icon span {
     height: 3px;
     background-color: white;
     border-radius: 1px;
   }
 
-  .form-container {
+  .section1-form-container {
     padding-left: 20px;
   }
-  .form__button {
+  .section1-form__button {
     width: 100%;
   }
 }
 
 @media (max-width: 992px) {
-  h1 {
+   .section1-title{
     padding-top: 270px;
     padding-left: 40px;
     font-size: 36px;
   }
 
-  .form-container {
+  .section1-form-container {
     height: 200px;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 40px 40px;
   }
 
-  .form__group {
+  .section1-form__group {
     flex: 1 1 48%;
     min-width: 200px;
   }
 
-  .form__date {
+  .section1-form__date {
     max-width: 212px;
   }
 
-  .form__label {
+  .section1-form__label {
     margin: 0;
   }
 
-  .form__button {
+  .section1-form__button {
     width: 212px;
     margin-bottom: 14px;
   }
 
-  .form__select {
+  .section1-form__select {
     max-width: 460px;
   }
 
-  .form__select--participants {
+  .section1-form__select--participants {
     max-width: 650px;
   }
 
 }
 
 @media (max-width: 700px) {
-  .form__group {
+  .section1-form__group {
     flex: 1 1 1 48%;
     min-width: 49%;
     max-width: 100%;
   }
 
-  .form__date {
+  .section1-form__date {
     max-width: 255px;
   }
 
@@ -305,7 +305,7 @@
     width: 100%;
   }
   
-  .form__select--participants {
+  .section1-form__select--participants {
     max-width: 100%;
   }
 }
