@@ -1,7 +1,16 @@
 import { SERVER_URL, POST, DELETE, PUT } from "./constants.js";
 
+class FetchError extends Error {
+  constructor (code, status) {
+    super();
+    this.code = code;
+    this.status = status;
+  };
+};
+
 export const api = async (method, payload, endpoint = `${SERVER_URL}`) => {
   let config = {};
+  let data;
 
   if (method) {
     config = {
@@ -21,37 +30,30 @@ export const api = async (method, payload, endpoint = `${SERVER_URL}`) => {
   }
 
   try {
-
     const response = await fetch(endpoint, config);
+    if (!response.ok) {
+      throw new FetchError(response.status, response.statusText);
+    };
 
-    if (response.ok) {
-      let message;
-
-      switch(method) {
-        case POST: {
-          message = 'Data has been added';
-          break;
-        }
-        case DELETE: {
-          message = 'Data has been removed';
-          break;
-        }  
-        case PUT: {
-          message = 'Data has been update';
-          break;
-        }
-        default: {
-          message = 'Data has been received';
-        }
-      } 
-      console.log(message);
-
-      const data = await response.json();
-      return data;
+    const messages = {
+      POST: 'Data has been added',
+      DELETE: 'Data has been removed',
+      PUT: 'Data has been update',
+      default: 'Data has been received', 
     }
-    throw new Error(response.statusText);
+
+    console.log(messages[method] || messages.default);
+
+    data = await response.json();
+    return data;
   } catch(err) {
-    console.error(err.message || err);
-    return null;
-  }
-}
+    
+      return {
+        data: !method ? [] : null,
+        error: true,
+        code: `${err.code}`,
+        status: `${err.status}`,
+        message: `Response status: ${err.code} - ${err.status}`,
+      };
+  };
+};  
