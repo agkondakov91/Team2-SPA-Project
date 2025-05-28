@@ -22,7 +22,8 @@
   --f-spinner-color-2: rgba(17, 24, 28, 0.8);
   --f-spinner-stroke: 2.75;
 }
-a {
+
+.a-tag {
   text-decoration: none;
   color: inherit;
 }
@@ -33,7 +34,7 @@ a {
 .footer-top {
   padding: 176px 0 80px;
 }
-.container {
+.footer-container {
   margin: 0 auto;
   padding: 0 10px;
   max-width: 1197px;
@@ -155,6 +156,11 @@ a {
 }
 .footer-info {
   margin: 0;
+}
+.footer-info:hover {
+  -webkit-text-decoration: underline 1px solid #f2be22;
+  text-decoration: underline 1px solid #f2be22;
+  color: #f2be22;
 }
 .footer-policy {
   margin: 0;
