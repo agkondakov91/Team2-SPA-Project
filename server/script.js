@@ -1,6 +1,5 @@
 import { api } from "./api.js";
 import { POST, DELETE, PUT } from "./constants.js";
-import { genUniqeId } from "./general.js";
 
 // получение всех данных
 export const getData = async () => {
@@ -62,21 +61,3 @@ export const removeData = async (id) => {
   }
  return  await api(DELETE, {id});
 }
-
-
-// const addElement = {
-//   id: genUniqeId(5),
-//   text: 'Shopping&Cleaning',
-//   completed: true
-// };
-
-// const updateElement = {
-//   id: "4",
-//   text: "Eat&Eat&Walk&Sleep&Shopping&Clean",
-//   completed: false
-// } 
-//getData();
-//getDataById ("");
-//addData(addElement);
-//updateData(updateElement.id, updateElement);
-//removeData("2");
