@@ -94,6 +94,10 @@
   fill: #fff;
   transition: all 0.1s;
 }
+.footer-social:hover {
+  fill: #f2be22;
+  transition: all 0.1s;
+}
 .footer-list {
   list-style: none;
   margin: 0;
