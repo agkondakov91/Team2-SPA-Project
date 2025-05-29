@@ -2,14 +2,22 @@
   "name": "team2-spa-project",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "npm-run-all --parallel json-server wait-for-server",
+    "wait-for-server": "wait-on http://localhost:3000/todos && npm run run-script && npm run open-cli",
+    "json-server": "json-server --watch db.json --port 3000",
+    "open-cli": "open-cli http://localhost:3000/todos",
+    "run-script": "node server/script.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "npm-run-all": "^4.1.5",
     "wait-on": "^8.0.3"
+  },
+  "devDependencies": {
+    "open-cli": "^8.0.0"
   }
 }

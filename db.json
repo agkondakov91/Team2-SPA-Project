@@ -1,13 +1,8 @@
 {
   "todos": [
     {
-      "id": "2",
-      "text": "Code",
-      "completed": true
-    },
-    {
       "id": "4",
-      "text": "Repeat",
+      "text": "Eat&Eat&Walk&Sleep&Shopping&Clean",
       "completed": false
     },
     {
@@ -174,6 +169,16 @@
       "id": "12611",
       "text": "New todo",
       "completed": false
+    },
+    {
+      "id": "96713",
+      "text": "Shoppimg",
+      "completed": true
+    },
+    {
+      "id": "06415",
+      "text": "Shopping&Cleaning",
+      "completed": true
     }
   ]
 }

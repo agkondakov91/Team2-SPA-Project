@@ -21,6 +21,8 @@
   --f-spinner-color-1: rgba(0, 0, 0, 0.1);
   --f-spinner-color-2: rgba(17, 24, 28, 0.8);
   --f-spinner-stroke: 2.75;
+  --font-family: 'Nunito Sans', sans-serif;
+  --second-family: 'NEXT ART', sans-serif;
 }
 
 .a-tag {
@@ -92,6 +94,10 @@
   width: 26px;
   height: 26px;
   fill: #fff;
+  transition: all 0.1s;
+}
+.footer-social:hover {
+  fill: #f2be22;
   transition: all 0.1s;
 }
 .footer-list {
