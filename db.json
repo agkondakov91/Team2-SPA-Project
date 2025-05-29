@@ -180,5 +180,29 @@
       "text": "Shopping&Cleaning",
       "completed": true
     }
-  ]
+  ],
+  "pictures_first": [
+    {
+      "id": "1",
+      "description": "Описание к pucture 1",
+      "imageUrl": "./images/first/1.jp"
+    },
+    {
+      "id": "1",
+      "description": "Описание к pucture 2",
+      "imageUrl": "./images/first/2.jp"
+    }
+  ],
+  "pictures_second": [
+    {
+      "id": "100",
+      "description": "Описание к pucture 100",
+      "imageUrl": "./images/second/100.jp"
+    },
+    {
+      "id": "101",
+      "description": "Описание к pucture 101",
+      "imageUrl": "./images/second/101.jp"
+    }
+  ]  
 }
