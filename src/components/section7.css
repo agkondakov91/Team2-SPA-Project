@@ -1,0 +1,116 @@
+:root {
+  --section7-color-white: #ffffff;
+  --section7-color-grey: #E1E3E4;
+  --section7-color-yellow: #F2BE21;
+  --section7-color-btn: #1A3E3E;
+  --section7-color-white-70: rgba(255, 255, 255, 0.7);
+  --section7-font-size-base: 16px;
+  --section7-padding-md: 12px;
+  --section7-radius-md: 8px;
+  --section7-radius-lg: 10px;
+}
+
+.section7 {
+  padding: 40px 100px;
+  display: flex;
+  justify-content: space-between;
+  width: 1180px;
+  height: 196px;
+  margin: 0 auto;
+  background-color: var(--section7-color-white);
+  border: none;
+  box-shadow: 0 0 15px 0 rgba(24,18,30,.12);
+  border-radius: var(--section7-radius-md);
+  position: relative;
+  top: 96px;
+}
+
+.section7-content {
+  width: 380px;
+}
+
+.section7-p {
+  color: var(--section7-color-yellow);
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.section7-h2 {
+  font-size: 26px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.section7-email-notifications {
+  display: flex;
+  flex-direction: row;
+}
+
+.section7-subscribe {
+  display: flex;
+  flex-direction: column;
+  width: 540px;
+  flex-wrap: nowrap;
+  margin-bottom: 8px;
+}
+
+.section7-p-email {
+  font-size: var(--section7-font-size-base);
+  font-weight: 500;
+  margin-bottom: 8px;
+  padding-left: 5px;
+  white-space: nowrap;
+}
+
+.section7-email-input {
+  width: 100%;
+  max-width: 280px;
+  height: 44px;
+  padding: var(--section7-padding-md) 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #F3F5F4;
+  font-size: var(--section7-font-size-base);
+  margin-bottom: 8px;
+}
+
+.section7-button {
+  width: 240px;
+  height: 44px;
+  font-size: 16px;
+  color: var(--section7-color-white);
+  background-color: var(--section7-color-btn);
+  border: none;
+  border-radius: 4px;
+  font-size: var(--section7-font-size-base);
+  cursor: pointer;
+}
+.section7-button:hover {
+  background-color: var(--section7-color-white-70);
+  color: var(--section7-color-btn);
+  border: 1px solid var(--section7-color-btn);
+}
+
+.section7-p-terms {
+  color: #000;
+  font-size: 14px;
+  max-width: 540px;
+  line-height: 1.4;
+}
+
+.section7-form {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.section7-a {
+    padding-left: 5px;
+    font-size: 14px;
+    color: black;
+    text-decoration: underline;
+}
+
+.section7-form-wrapper {
+    min-width: 60px;
+}
