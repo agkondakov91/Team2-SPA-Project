@@ -28,11 +28,15 @@
 
 .section4-title1 {
   color: var(--color-yellow);
+  font-family: var(--font-family);
+  font-weight: 400;
   font-size: 24px;
 }
 
 .section4-title2 {
   padding-top: 0;
+  font-family: var(--font-family);
+  font-weight: 600;
   font-size: 32px;
   color: var(--color-black);
 }
@@ -103,6 +107,8 @@
 }
 
 .section4-photo-item-information-story {
+  font-family: var(--font-family);
+  font-weight: 400;
   font-size: 16px;
   line-height: 150%;
   margin-bottom: 100px;
@@ -110,12 +116,15 @@
 
 .section4-photo-item-information h2 {
   color: var(--color-white);
+  font-family: var(--font-family);
   font-size: 24px;
   font-weight: bold;
 }
 
 .section4-photo-item-information p {
   color: var(--color-white);
+  font-family: var(--font-family);
+  font-weight: 400;
   font-size: 14px;
 }
 
@@ -135,12 +144,16 @@
 .section4-button-story {
   width: 200px;
   height: 38px;
+  font-family: var(--font-family);
+  font-weight: 400;
   font-size: 16px;
 }
 
 .section4-button-rating {
   width: 244px;
   height: 52px;
+  font-family: var(--font-family);
+  font-weight: 600;
 }
 
 .section4-button {
