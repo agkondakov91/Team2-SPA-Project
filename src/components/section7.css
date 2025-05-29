@@ -31,11 +31,14 @@
 
 .section7-p {
   color: var(--section7-color-yellow);
+  font-family: var(--font-family);
+  font-weight: 400;
   font-size: 18px;
   margin-bottom: 8px;
 }
 
 .section7-h2 {
+  font-family: var(--font-family);
   font-size: 26px;
   font-weight: bold;
   margin: 0;
@@ -56,6 +59,7 @@
 
 .section7-p-email {
   font-size: var(--section7-font-size-base);
+  font-family: var(--font-family);
   font-weight: 500;
   margin-bottom: 8px;
   padding-left: 5px;
@@ -70,6 +74,8 @@
   border: none;
   border-radius: 4px;
   background-color: #F3F5F4;
+  font-family: var(--font-family);
+  font-weight: 200;
   font-size: var(--section7-font-size-base);
   margin-bottom: 8px;
 }
@@ -82,6 +88,8 @@
   background-color: var(--section7-color-btn);
   border: none;
   border-radius: 4px;
+  font-family: var(--font-family);
+  font-weight: 400;
   font-size: var(--section7-font-size-base);
   cursor: pointer;
 }
@@ -93,6 +101,8 @@
 
 .section7-p-terms {
   color: #000;
+  font-family: var(--font-family);
+  font-weight: 400;
   font-size: 14px;
   max-width: 540px;
   line-height: 1.4;
