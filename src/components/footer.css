@@ -1,0 +1,209 @@
+:root {
+  --f-button-width: 40px;
+  --f-button-height: 40px;
+  --f-button-border: 0;
+  --f-button-border-radius: 0;
+  --f-button-color: #374151;
+  --f-button-bg: #f8f8f8;
+  --f-button-hover-bg: #e0e0e0;
+  --f-button-active-bg: #d0d0d0;
+  --f-button-shadow: none;
+  --f-button-transition: all 0.15s ease;
+  --f-button-transform: none;
+  --f-button-svg-width: 20px;
+  --f-button-svg-height: 20px;
+  --f-button-svg-stroke-width: 1.5;
+  --f-button-svg-fill: none;
+  --f-button-svg-filter: none;
+  --f-button-svg-disabled-opacity: 0.65;
+  --f-spinner-width: 36px;
+  --f-spinner-height: 36px;
+  --f-spinner-color-1: rgba(0, 0, 0, 0.1);
+  --f-spinner-color-2: rgba(17, 24, 28, 0.8);
+  --f-spinner-stroke: 2.75;
+}
+
+.a-tag {
+  text-decoration: none;
+  color: inherit;
+}
+.footer {
+  background-color: #1a3e3e;
+  width: 100vw;
+}
+.footer-top {
+  padding: 176px 0 80px;
+}
+.footer-container {
+  margin: 0 auto;
+  padding: 0 10px;
+  max-width: 1197px;
+}
+.footer-top-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+.footer-items:first-of-type {
+  max-width: 480px;
+}
+.footer-items {
+  flex: 1;
+  max-width: 280px;
+}
+.footer-title {
+  margin: 0 0 20px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #f3f5f4;
+}
+.footer-text {
+  margin: 0;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #fff;
+}
+.footer-contacts {
+  display: flex;
+  margin: 80px 0 32px;
+  gap: 24px;
+}
+.footer-contact {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-decoration: underline;
+  color: #fff;
+  transition: all 0.1s;
+}
+.footer-socials {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 21px;
+}
+.footer-social {
+  width: 26px;
+  height: 26px;
+  fill: #fff;
+  transition: all 0.1s;
+}
+.footer-social:hover {
+  fill: #f2be22;
+  transition: all 0.1s;
+}
+.footer-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.footer-list-item {
+  display: flex;
+  align-items: baseline;
+}
+.footer-list-item + .footer-list-item {
+  margin-top: 16px;
+}
+.footer-arrow {
+  margin-right: 10px;
+  width: 6px;
+  height: 10px;
+  fill: #fff;
+  transition: all 0.1s;
+}
+.footer-link {
+  position: relative;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  -webkit-text-decoration: underline 1px solid rgba(0, 0, 0, 0);
+  text-decoration: underline 1px solid rgba(0, 0, 0, 0);
+  color: #fdfdfd;
+  transition: all 0.1s;
+}
+.footer-link--new::after {
+  content: 'NEW';
+  margin-left: 8px;
+  border-radius: 4px;
+  padding: 2px 10px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  -webkit-text-decoration: underline 1px solid #fff;
+  text-decoration: underline 1px solid #fff;
+  text-transform: lowercase;
+  color: #1a3e3e;
+  background: #fff;
+}
+.footer-bottom {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: #fff;
+  background-color: #18121e;
+}
+.footer-bottom-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 24px 0;
+  gap: 8px;
+}
+.footer-info {
+  margin: 0;
+}
+.footer-info:hover {
+  -webkit-text-decoration: underline 1px solid #f2be22;
+  text-decoration: underline 1px solid #f2be22;
+  color: #f2be22;
+}
+.footer-policy {
+  margin: 0;
+  text-align: center;
+  text-decoration: underline;
+  transition: all 0.1s;
+  cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  .footer-top {
+    padding: 40px 0;
+  }
+  .footer-contacts {
+    margin: 30px 0;
+  }
+  .footer-bottom-wrapper {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 992px) {
+  .footer-top-wrapper {
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+  .footer-items {
+    flex: 1 1 280px;
+  }
+}
+
+.footer-list-item:hover .footer-link {
+  -webkit-text-decoration: underline 1px solid #f2be22;
+  text-decoration: underline 1px solid #f2be22;
+  color: #f2be22;
+}
+
+.footer-contact:hover {
+  -webkit-text-decoration: underline 1px solid #f2be22;
+  text-decoration: underline 1px solid #f2be22;
+  color: #f2be22;
+}

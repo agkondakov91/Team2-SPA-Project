@@ -57,6 +57,13 @@
   padding: 0;
 }
 
+.header__item {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  color: #fdfdfd;
+}
+
 .header__button {
   margin-left: 32px;
   background-color: #1A3E3E;
@@ -66,6 +73,8 @@
   padding: var(--padding-md) 24px;
   cursor: pointer;
   width: 160px;
+  font-family: var(--font-family);
+  font-weight: 400;
   font-size: 18px;
   align-items: center;
 }
@@ -88,6 +97,8 @@
 .section1-title {
   display: flex;
   color: var(--color-white);
+  font-family: var(--second-family);
+  font-weight: 700;
   font-size: 50px;
   max-width: 1180px;
   margin: auto;
@@ -141,10 +152,14 @@
 .form__select,
 .form__date {
   color: var(--color-grey);
+  font-family: var(--font-family);
+  font-weight: 400;
 }
 
 .form__hint {
   color: var(--color-grey);
+  font-family: var(--font-family);
+  font-weight: 400;
   font-size: 14px;
   margin-top: 4px;
   max-width: 270px;
@@ -155,6 +170,7 @@
   background: var(--color-white);
   color: #1b1b1b;
   padding: 16px 32px;
+  font-family: var(--font-family);
   font-weight: bold;
   font-size: 16px;
   border:  solid 1px var(--color-white);

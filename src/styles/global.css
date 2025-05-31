@@ -1,3 +1,8 @@
+:root {
+  --font-family: 'Nunito Sans', sans-serif;
+  --second-family: 'NEXT ART', sans-serif;
+}
+
 *,
 *::before,
 *::after {
@@ -9,9 +14,9 @@ html {
   scroll-behavior: smooth;
 }
 
-/* body {
-  max-width: 1200px;
-} */
+body {
+  margin: 0;
+}
 
 ul {
   list-style: none;
