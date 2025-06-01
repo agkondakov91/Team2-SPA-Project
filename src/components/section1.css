@@ -17,7 +17,7 @@
   background-size: cover;
 }
 
-.header {
+.section1-header {
   display: flex;
   position: relative;
   flex-direction: row;
@@ -28,15 +28,15 @@
   max-width: 1180px;
 }
 
-.header__logo,
-.header__title {
+.section1-header__logo,
+.section1-header__title {
   position: relative;
   flex-direction: row;
   align-items: center;
   margin: 0 auto;
 }
 
-.header__nav {
+.section1-header__nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -46,7 +46,7 @@
   gap: 40px;
 }
 
-.header__list {
+.section1-header__list {
   white-space: nowrap;
   display: flex;
   flex-direction: row;
@@ -57,7 +57,7 @@
   padding: 0;
 }
 
-.header__button {
+.section1-header__button {
   margin-left: 32px;
   background-color: #1A3E3E;
   color: var(--color-white);
@@ -70,18 +70,18 @@
   align-items: center;
 }
 
-.header__button:hover {
+.section1-header__button:hover {
   background-color: var(--color-white);
   color: #1b1b1b;
   border: solid 1px var(--color-white);
   transition: background 0.3s;
 }
 
-.header__item:hover {
+.section1-header__item:hover {
   color: #F2BE21;
 }
 
-.menu__icon {
+.section1-menu__icon {
   display: none;
 }
 
@@ -94,10 +94,11 @@
   text-align: left;
   padding-top: 416px;
   margin: 40px auto;
+  margin-top: 0;
   text-transform: uppercase
 }
 
-.form-container {
+.section1-form-container {
   position: relative;
   margin: 0 auto;
   background: rgba(255, 255, 255, 0.1);
@@ -110,40 +111,41 @@
   gap: 16px;
   backdrop-filter: blur(8px);
   max-width: 1180px;
-  min-height: 160px;
+  height: 180px;
 }
 
-.form__group {
+.section1-form__group {
   display: flex;
   flex-direction: column;
   flex: 1;
   min-width: 220px;
 }
 
-.form__label {
+.section1-form__label {
   color: var(--color-grey);
   font-weight: bold;
   margin-bottom: 8px;
 }
 
-.form__input,
-.form__select,
-.form__date {
+.section1-form__input,
+.section1-form__select,
+.section1-form__date {
   background: transparent;
   border: 2px solid var(--color-grey);
   color: var(--color-white);
   border-radius: var(--radius-md);
   padding: var(--padding-md);
   font-size: var(--font-size-base);
+  height: 52px;
 }
 
-.form__input::placeholder,
-.form__select,
-.form__date {
+.section1-form__input::placeholder,
+.section1-orm__select,
+.section1-form__date {
   color: var(--color-grey);
 }
 
-.form__hint {
+.section1-form__hint {
   color: var(--color-grey);
   font-size: 14px;
   margin-top: 4px;
@@ -151,7 +153,7 @@
   padding-left: 10px;
 }
 
-.form__button {
+.section1-form__button {
   background: var(--color-white);
   color: #1b1b1b;
   padding: 16px 32px;
@@ -161,22 +163,22 @@
   border-radius: 4px;
   cursor: pointer;
   transition: background 0.3s;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
   max-width: 215px;
 }
 
-.form__button:hover {
+.section1-form__button:hover {
   background: #1A3E3E;
   color: var(--color-white);
   border: solid 1px var(--color-white);
 }
 
-.form__date-range {
+.section1-form__date-range {
   display: flex;
   gap: -1px;
 }
 
-.form__date-range-wrapper {
+.section1-form__date-range-wrapper {
   display: flex;
   border: 2px solid var(--color-grey);
   border-radius: var(--radius-lg);
@@ -184,7 +186,7 @@
   background: transparent;
 }
 
-.form__date {
+.section1-form__date {
   background: transparent;
   color: var(--color-grey);
   padding: 12px 5px;
@@ -194,35 +196,38 @@
   width: 100%;
 }
 
-.input-left {
+.section1-input-left {
   border-right: none;
   max-width: 270px;
 }
 
-.input-right {
+.section1-input-right {
   border-left: none;
   max-width: 270px;
 }
 
-.form__date::-webkit-calendar-picker-indicator {
+.section1-form__date::-webkit-calendar-picker-indicator {
   filter: invert(1);
 }
 
 @media (max-width: 1100px) {
-  .header__logo,
-  .header__title {
+  .section1 {
+    height: 1019px;
+  }
+  .section1-header__logo,
+  .section1-header__title {
     margin: 0;
   }
 
-  .header__nav {
+  .section1-header__nav {
    display: none;
   } 
 
-  h1 {
+  .section1-title {
     padding-left: 20px;
   }
 
-  .menu__icon {
+  .section1-menu__icon {
     position: absolute;
     width: 24px;
     height: 18px;
@@ -234,82 +239,123 @@
     right: 0;
   }
   
-  .menu__icon span {
+  .section1-menu__icon span {
     height: 3px;
     background-color: white;
     border-radius: 1px;
   }
 
-  .form-container {
+  .section1-form-container {
     padding-left: 20px;
   }
-  .form__button {
+  .section1-form__button {
     width: 100%;
   }
 }
 
 @media (max-width: 992px) {
-  h1 {
+  .section1-title {
     padding-top: 270px;
     padding-left: 40px;
     font-size: 36px;
   }
 
-  .form-container {
-    height: 200px;
+  .section1-form-container {
+    height: 250px;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 40px 40px;
   }
 
-  .form__group {
+  .section1-form__group {
     flex: 1 1 48%;
     min-width: 200px;
   }
 
-  .form__date {
+  .section1-form__date {
     max-width: 212px;
   }
 
-  .form__label {
+  .section1-form__label {
     margin: 0;
   }
 
-  .form__button {
+  .section1-form__button {
     width: 212px;
     margin-bottom: 14px;
   }
 
-  .form__select {
+  .section1-form__select {
     max-width: 460px;
+    height: 52px;
   }
 
-  .form__select--participants {
+  .section1-form__select--participants {
     max-width: 650px;
   }
-
 }
 
 @media (max-width: 700px) {
-  .form__group {
+  .section1 {
+    height: 1039px;
+  }
+
+  .section1-title {
+    padding-top: 350px;
+    padding-left: 0;
+  }
+
+  .section1-form-container {
+    height: 373px;
+    padding: 40px 20px;
+  }
+
+  .section1-form__group {
     flex: 1 1 1 48%;
     min-width: 49%;
     max-width: 100%;
+    padding: 0;
+    margin: 0
   }
 
-  .form__date {
+  .section1-form__date {
     max-width: 255px;
   }
 
-   .form__select {
+   .section1-form__select {
     width: 100%;
+    max-width: 100%;
   }
   
-  .form__select--participants {
+  .section1-form__select--participants {
     max-width: 100%;
   }
 }
 
 @media (max-width: 577px) {
-  /* для мобильных устройств */
+  .section1 {
+    height: 588px;
+  }
+  .section1-title {
+    padding-top: 200px;
+    font-size: 28px;
+
+  }
+
+  .section1-form__group {
+    display: none;
+  }
+
+  .section1-form-container {
+    padding: 0px;
+    margin: 0 auto;
+    height: 52px;
+    width: 212px;
+  }
+
+  .section1-form__button {
+    width: 100%;
+    margin: 0;
+  }
+
 }
