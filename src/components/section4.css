@@ -123,7 +123,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 
 .section4-photo-item-information h2 {
@@ -188,19 +188,19 @@
     justify-content: flex-start;
   }
   .section4-photo-item-information-visible {
-    margin-bottom: 50px;
+    margin-bottom: 25px;
   }
   .section4-photo-item-information-story {
-    margin-bottom: 50px;
+    margin-bottom: 25px;
   }
 }
 
 @media (max-width: 900px) {
   .section4-photo-item-information-visible {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
   }
   .section4-photo-item-information-story {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
   }
 }
 
