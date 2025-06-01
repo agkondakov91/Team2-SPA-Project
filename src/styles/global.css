@@ -1,3 +1,8 @@
+:root {
+  --font-family: 'Nunito Sans', sans-serif;
+  --second-family: 'NEXT ART', sans-serif;
+}
+
 *,
 *::before,
 *::after {
