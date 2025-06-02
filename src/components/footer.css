@@ -21,8 +21,6 @@
   --f-spinner-color-1: rgba(0, 0, 0, 0.1);
   --f-spinner-color-2: rgba(17, 24, 28, 0.8);
   --f-spinner-stroke: 2.75;
-  --font-family: 'Nunito Sans', sans-serif;
-  --second-family: 'NEXT ART', sans-serif;
 }
 
 .a-tag {
@@ -76,7 +74,7 @@
 }
 .footer-contact {
   font-family: var(--font-family);
-  font-weight: 600;
+  font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   text-decoration: underline;
@@ -199,6 +197,12 @@
 }
 
 .footer-list-item:hover .footer-link {
+  -webkit-text-decoration: underline 1px solid #f2be22;
+  text-decoration: underline 1px solid #f2be22;
+  color: #f2be22;
+}
+
+.footer-contact:hover {
   -webkit-text-decoration: underline 1px solid #f2be22;
   text-decoration: underline 1px solid #f2be22;
   color: #f2be22;

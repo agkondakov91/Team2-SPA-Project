@@ -22,12 +22,16 @@
 }
 .section6-title1 {
   color: var(--color-yellow);
+  font-family: var(--font-family);
+  font-weight: 400;
   font-size: 24px;
 }
 
 .section6-title2 {
   font-size: 32px;
   margin-bottom: 40px;
+  font-family: var(--font-family);
+  font-weight: 600;
 }
 
 .section6-grid {
@@ -89,6 +93,9 @@
   border: none;
   transition: background-color 0.3s linear;
   transition: color 0.3s linear;
+
+  font-family: var(--font-family);
+  font-weight: 500;
 }
 
 .section6-button:hover {

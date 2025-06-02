@@ -28,30 +28,46 @@
 
 .section4-title1 {
   color: var(--color-yellow);
+  font-family: var(--font-family);
+  font-weight: 400;
   font-size: 24px;
 }
 
 .section4-title2 {
   padding-top: 0;
+  font-family: var(--font-family);
+  font-weight: 600;
   font-size: 32px;
   color: var(--color-black);
 }
 
 .section4-photo {
+  max-height: 500px;
+  max-width: 100%;
   display: flex;
   flex-direction: row;
+  justify-content: center;
   margin-top: 50px;
   margin-bottom: 50px;
+
+  overflow-x: hidden; /* Горизонтальная прокрутка */
+  box-sizing: border-box;
+  scroll-snap-type: x mandatory; /*  Фиксирует прокрутку к элементам */
 }
 
 .section4-photo-item {
-  height: 500px;
+  max-width: 100%;
   margin: 10px;
   position: relative;
+
+  scroll-snap-align: start; /*  Выравнивает начало элемента при прокрутке */
 }
 
 .section4-photo-item img {
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  min-height: 400px;
+  min-width: 285px;
 }
 
 .section4-photo-rating {
@@ -69,14 +85,14 @@
   bottom: 0;
 
   display: flex;
-  /* justify-content: space-between; */
   flex-direction: column;
 
   width: 100%;
-  height: 100%;
   height: 90px;
   padding-left: 30px;
   padding-right: 30px;
+  padding-bottom: 30px;
+
   overflow: hidden;
   top: auto;
   transition: height 1.3s linear;
@@ -91,7 +107,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 100px;
+  margin-bottom: 75px;
 
   flex-basis: 90px;
   flex-shrink: 0;
@@ -103,19 +119,24 @@
 }
 
 .section4-photo-item-information-story {
+  font-family: var(--font-family);
+  font-weight: 400;
   font-size: 16px;
   line-height: 150%;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 
 .section4-photo-item-information h2 {
   color: var(--color-white);
+  font-family: var(--font-family);
   font-size: 24px;
   font-weight: bold;
 }
 
 .section4-photo-item-information p {
   color: var(--color-white);
+  font-family: var(--font-family);
+  font-weight: 400;
   font-size: 14px;
 }
 
@@ -135,12 +156,16 @@
 .section4-button-story {
   width: 200px;
   height: 38px;
+  font-family: var(--font-family);
+  font-weight: 400;
   font-size: 16px;
 }
 
 .section4-button-rating {
   width: 244px;
   height: 52px;
+  font-family: var(--font-family);
+  font-weight: 600;
 }
 
 .section4-button {
@@ -156,4 +181,32 @@
   background-color: var(--color-white);
   color: var(--color-button);
   border: var(--color-button) solid 1px;
+}
+
+@media (max-width: 1100px) {
+  .section4-photo {
+    justify-content: flex-start;
+  }
+  .section4-photo-item-information-visible {
+    margin-bottom: 25px;
+  }
+  .section4-photo-item-information-story {
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 900px) {
+  .section4-photo-item-information-visible {
+    margin-bottom: 15px;
+  }
+  .section4-photo-item-information-story {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 577px) {
+  .section4-title {
+    align-items: flex-start;
+    align-self: flex-start;
+  }
 }
