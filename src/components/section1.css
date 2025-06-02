@@ -1,3 +1,26 @@
+@font-face {
+  font-family: 'NEXT ART Regular';
+  src: url('../fonts/AnyConv.com__NEXT\ ART_Regular.woff2') format('woff2'),
+       url('../fonts/NEXT\ ART_Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NEXT ART Light';
+  src: url('../fonts/AnyConv.com__NEXT\ ART_Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'NEXT ART Bold';
+  src: url('../fonts/NEXT\ ART_Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
 :root {
   --color-white: #ffffff;
   --color-grey: #E1E3E4;
@@ -26,6 +49,7 @@
   padding: 10px;
   font-size: 18px;
   max-width: 1180px;
+  font-family: "NEXT ART Light", normal;
 }
 
 .section1-header__logo,
@@ -55,6 +79,8 @@
   gap: 32px;
   margin: 0;
   padding: 0;
+  font-family: "NEXT ART Light", sans-serif;
+  font-weight: 500;
 }
 
 .section1-header__button {
@@ -63,11 +89,14 @@
   color: var(--color-white);
   border: none;
   border-radius: 5px;
-  padding: var(--padding-md) 24px;
+  /* padding: var(--padding-md) 24px; */
+  text-align: center;
   cursor: pointer;
+  height: 44px;
   width: 160px;
   font-size: 18px;
   align-items: center;
+  font-family: "NEXT ART Light", sans-serif;
 }
 
 .section1-header__button:hover {
@@ -95,7 +124,11 @@
   padding-top: 416px;
   margin: 40px auto;
   margin-top: 0;
-  text-transform: uppercase
+  text-transform: uppercase;
+  font-family: 'NEXT ART Bold', sans-serif;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 1px;
 }
 
 .section1-form-container {
@@ -112,6 +145,7 @@
   backdrop-filter: blur(8px);
   max-width: 1180px;
   height: 180px;
+  font-family: "NEXT ART Light", sans-serif;
 }
 
 .section1-form__group {
