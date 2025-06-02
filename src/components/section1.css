@@ -83,7 +83,7 @@
   font-weight: 500;
 }
 
-.section1-header__button 
+.section1-header__button {
   margin-left: 32px;
   background-color: #1A3E3E;
   color: var(--color-white);
