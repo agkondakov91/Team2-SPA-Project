@@ -6,14 +6,15 @@
   "main": "index.js",
   "scripts": {
     "dev": "npm-run-all --parallel json-server wait-for-server",
-    "wait-for-server": "wait-on http://localhost:3000/todos && npm run run-script && npm run open-cli",
-    "json-server": "json-server --watch db.json --port 3000",
+    "wait-for-server": "wait-on http://localhost:3000/todos && npm run script && npm run open-cli",
+    "json-server": "json-server --watch db.json --static ./public --port 3000 ",
     "open-cli": "open-cli http://localhost:3000/todos",
-    "run-script": "node server/script.js"
+    "script": "node server/script.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "json-server": "^1.0.0-beta.3",
     "npm-run-all": "^4.1.5",
     "wait-on": "^8.0.3"
   },
