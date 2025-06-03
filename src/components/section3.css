@@ -163,3 +163,55 @@
   max-width: 100%;
   height: auto;
 }
+
+
+
+@media (max-width: 992px) {
+    .programs-wrapper {
+        padding: 75px 0;
+    }
+    
+    .programs-content {
+        flex: 3;
+    }
+    
+    .programs-media {
+        justify-content: center;
+        grid-template-columns: 150px;
+    }
+}
+
+@media (max-width: 576px) {
+    .subtitle {
+        font-size: 16px;
+    }
+    
+    .title {
+        margin-bottom: 32px;
+        font-size: 24px;
+    }
+    
+    .programs-wrapper {
+        padding: 50px 0;
+    }
+    
+    .programs-text {
+        margin-bottom: 32px;
+        font-size: 16px;
+    }
+    
+    .programs-items {
+        margin-bottom: 32px;
+        gap: 32px;
+    }
+    
+    .programs-price {
+        margin: 0 auto;
+        width: 212px;
+        height: 44px;
+    }
+    
+    .programs-media {
+        display: none;
+    }
+}
