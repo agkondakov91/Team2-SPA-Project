@@ -14,7 +14,7 @@
   padding: 40px 100px;
   display: flex;
   justify-content: space-between;
-  width: 1180px;
+  max-width: 1180px;
   height: 196px;
   margin: 0 auto;
   background-color: var(--section7-color-white);
@@ -123,4 +123,57 @@
 
 .section7-form-wrapper {
     min-width: 60px;
+}
+
+@media (max-width: 1200px) {
+    .section7 {
+        padding: 40px;
+        margin: 0;
+        height: 270px;
+        align-items: center;
+    }
+
+    .section7-form-wrapper {
+        display: none;
+    }
+
+    .section7-email-notifications {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .section7-content {
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .section7-subscribe {
+        width: 100%;
+        max-width: 992px;
+        margin-bottom: 16px;
+    }
+
+    .section7-email-input {
+        width: 100%;
+        max-width: 440px;
+        margin-bottom: 16px;
+    }
+
+    .section7-button {
+        width: 100%;
+        max-width: 440px;
+        margin-left: auto;
+    }
+
+    .section7-p-terms {
+        max-width: 1180px;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .section7-h2 {
+        margin-bottom: 10px;
+    }
 }
