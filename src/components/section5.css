@@ -189,3 +189,126 @@
     transition: all 0.3s;
     cursor: pointer;
   }
+
+  @media(max-width: 992px) {
+    .section-5-blog {
+        padding: 75px 0
+    }
+
+    .section-5-news-item {
+        flex: 1 1 100%
+    }
+
+    .section-5-news-content {
+        flex: 1 1 70%
+    }
+
+    .section-5-news-info {
+        margin: auto 0 0
+    }
+    
+    .section-5-newsletter-wrapper {
+        flex-direction: column
+    }
+
+    .section-5-newsletter-content {
+        flex: 1 1 auto;
+        text-align: center
+    }
+
+    .section-5-newsletter-subscribe {
+        flex: 1 1 auto
+    }
+
+    .section-5-newsletter-label {
+        flex: 1
+    }
+
+    .section-5-newsletter-input {
+        width: 100%
+    }
+
+    .section-5-newsletter-button {
+        flex: 1
+    }
+}
+
+@media(max-width: 768px) {
+    .section-5-news-item {
+        flex: 1 0 285px;
+        flex-direction: column;
+        padding: 0
+    }
+
+    .section-5-news-item-pic {
+        height: 280px
+    }
+
+    .section-5-news-img {
+        width: 100%
+    }
+
+    .section-5-news-content {
+        flex: 1 0 210px;
+        margin-left: 0;
+        padding: 16px
+    }
+
+    .section-5-news-title {
+        padding: 0 0 16px;
+        font-size: 20px;
+        line-height: 26px
+    }
+
+    .section-5-news-descr {
+        margin-bottom: 16px
+    }
+
+    .section-5-news {
+        flex-wrap: unset;
+        gap: unset
+    }
+}
+
+@media(max-width: 576px) {
+    .section-5-blog-content {
+        text-align: left
+    }
+
+    .section-5-blog-btn {
+        width: 196px;
+        height: 44px
+    }
+
+    .section-5-blog {
+        padding: 50px 0
+    }
+    
+    .section-5-newsletter-wrapper {
+        margin-bottom: 50px;
+        padding: 24px;
+        gap: 18px
+    }
+
+    .section-5-newsletter-content {
+        text-align: left
+    }
+
+    .section-5-newsletter-subtitle {
+        font-size: 16px
+    }
+
+    .section-5-newsletter-title {
+        margin: 0;
+        font-size: 24px
+    }
+
+    .section-5-newsletter-form {
+        flex-direction: column;
+        margin-bottom: 24px
+    }
+
+    .section-5-newsletter-button {
+        flex: 1 1 44px
+    }
+}
