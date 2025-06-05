@@ -39,10 +39,13 @@
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(2, 1fr);
   box-sizing: border-box;
-  height: 520px;
-  width: 1180px;
+
+  max-height: 520px;
+  max-width: 100%;
   margin-bottom: 40px;
   gap: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .section6-grid img {
@@ -102,4 +105,57 @@
   background-color: var(--color-white);
   color: var(--color-button);
   border: var(--color-button) solid 1px;
+}
+
+@media (max-width: 735px) {
+  /* .section6-container {
+    align-items: flex-start;
+  } */
+
+  .section6-grid {
+    grid-template-columns: repeat(12, 90px);
+    grid-template-rows: repeat(1, 250px);
+    overflow-x: hidden; /* Горизонтальная прокрутка */
+    scroll-snap-type: x mandatory; /*  Фиксирует прокрутку к элементам */
+    /* min-width: auto; */
+  }
+
+  .section6-picture {
+    scroll-snap-align: start; /*  Выравнивает начало элемента при прокрутке */
+  }
+
+  .section6-picture1 {
+    display: none;
+  }
+
+  .section6-picture2 {
+    grid-column: 1/4;
+    grid-row: 1/2;
+  }
+
+  .section6-picture3 {
+    grid-column: 4/7;
+    grid-row: 1/2;
+  }
+
+  .section6-picture4 {
+    grid-column: 7/10;
+    grid-row: 1/2;
+  }
+
+  .section6-picture5 {
+    display: none;
+  }
+
+  .section6-picture6 {
+    grid-column: 10/13;
+    grid-row: 1/2;
+  }
+}
+
+@media (max-width: 577px) {
+  .section6-title {
+    align-items: flex-start;
+    align-self: flex-start;
+  }
 }
