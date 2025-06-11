@@ -2,7 +2,7 @@
  *  Модуль для реализации HTTP-методов.
  */
 
-import { POST, DELETE, PUT, arrayOfMethods } from './constants.js';
+import { POST, DELETE, PUT, GET, arrayOfMethods } from './constants.js';
 
 /** @extends Error
  * Класс представляющий расширение стандартного класса Error

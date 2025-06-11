@@ -2,27 +2,19 @@
  * Модуль определения переменных для HTTP-методов и endpoints.
  */
 
-/** Адрес основного ендпоинта
+/** Адрес основного ендпоинта с данными для секий 1, 2, 3, 4
  *  @memberof module:constants
  *  @export
  *  @constant {string}
  */
-export const SERVER_URL_TODOS = 'http://localhost:3000/todos';
+export const SERVER_URL_DATA = 'http://localhost:3000/data';
 
-/** Адрес первго ендпоинта со ссылками на изображения
+/** Адрес ендпоинта с данными блога
  *  @memberof module:constants
  *  @export
  *  @constant {string}
  */
-export const SERVER_URL_PICTURES_FIRST = 'http://localhost:3000/pictures_first';
-
-/** Адрес второго ендпоинта со ссылками на изображения
- *  @memberof module:constants
- *  @export
- *  @constant {string}
- */
-export const SERVER_URL_PICTURES_SECOND =
-  'http://localhost:3000/pictures_second';
+export const SERVER_URL_BLOGS = "http://localhost:3000/blogs";
 
 /** Метод HTTP для запроса данных с сервера
  *  @memberof module:constants
