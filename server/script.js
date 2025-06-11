@@ -220,28 +220,10 @@ export const removeData = async (endpoint, id) => {
   }
 };
 
-// const addElement = {
-//   id: genUniqueId(5),
-//   text: 'Add data with description',
-//   completed: false,
-// };
-
-// const updateElement = {
-//   id: '100',
-//   descripton: 'Update data',
-//   completed: true,
-// };
-
-// getData(SERVER_URL_PICTURES_SECOND);
-// getDataById(SERVER_URL_PICTURES_SECOND, '101');
-// addData(SERVER_URL_PICTURES_SECOND, addElement);
-// updateData(SERVER_URL_PICTURES_SECOND, updateElement);
-// removeData(SERVER_URL_PICTURES_SECOND, '11135');
-
 const data = await getData(SERVER_URL_DATA);
 
 //const titleSection1 = data.titleSection1; // заголовок Секции 1
-const { titleSection1 } = data;
+const { titleSection1 } = data; // заголовок Секции 1 с помощью деструкторизации
 console.log(titleSection1, "\n");
 
 for (let i = 0; i < data.dataSection1_2.length; i++) {
@@ -266,7 +248,7 @@ const textSection2 = data.dataSection1_2[0].tourStructure; // структура
 console.log('Структура тура: ', textSection2, "\n");
 
 // по кнопке "Программа тура"
-const program = direction[0].dirProgram; //  прграмма ппервого направления  по выбранной локации
+const program = direction[0].dirProgram; //  программа первого направления по выбранной локации
 for (let i = 0; i < program.length; i++) {
   console.log(i + 1, program[i].name); //
 }
@@ -275,7 +257,7 @@ console.log("\n");
 const titleSection3 = data.dataSection3.titleSection3 // заголовок Секции 3
 console.log('Заголовок секции 3: ',titleSection3);
 
-const subtitleSection3 = data.dataSection3.subtitleSection3 // подзаголовк секции 3
+const subtitleSection3 = data.dataSection3.subtitleSection3 // подзаголовок Секции 3
 console.log('Подзаголовк секции 3:', subtitleSection3, "\n");
 
 const baseServices = data.dataSection3.baseServices;
@@ -288,7 +270,7 @@ console.log("\n");
 const titleSection4 = data.dataSection4.titleSection4; // заголовок Секции 4
 console.log('Заголовок секции 4: ',titleSection4);
 
-const subtitleSection4 = data.dataSection4.subtitleSection4 // подзаголовк секции 4
+const subtitleSection4 = data.dataSection4.subtitleSection4 // подзаголовок секции 4
 console.log('Подзаголовк секции 4:', subtitleSection4, "\n");
 
 // данные для Секции 4
@@ -326,12 +308,3 @@ for (let i = 0; i < dataBlogs.length; i++) {
   console.log(dataBlogs[i].blogText); 
 }
 console.log("\n");
-
-//console.log(data);
-//getDataById (SERVER_URL_PICTURES_SECOND, '101');
-// const add = await addData(SERVER_URL_TODOS, addElement);
-// console.log(add);
-// const data = await getData(SERVER_URL_TODOS);
-// console.log(data);
-// updateData(SERVER_URL_PICTURES_SECOND, updateData);
- //removeData(SERVER_URL_PICTURES_SECOND, '11135');
