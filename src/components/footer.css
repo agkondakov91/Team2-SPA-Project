@@ -43,6 +43,7 @@
   display: flex;
   justify-content: space-between;
   gap: 5px;
+  margin: 0 10px;
 }
 .footer-items:first-of-type {
   max-width: 480px;
@@ -157,6 +158,8 @@
   justify-content: space-between;
   padding: 24px 0;
   gap: 8px;
+  margin-left: 10px;
+  margin-right: 20px;
 }
 .footer-info {
   margin: 0;
