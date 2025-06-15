@@ -9,72 +9,66 @@
   <body>
     <main>
       <section class="section1">
-        <header class="section1-header">
-          <img
-            src="../src/images/section1/logo.png"
-            alt="logo"
-            class="section1-header__logo section1-header"
-          />
-          <nav class="section1-header__nav section1-header">
-            <ul class="section1-header__list">
-              <li class="section1-header__item">Главная</li>
-              <li class="section1-header__item">Про гида</li>
-              <li class="section1-header__item">Программа тура</li>
-              <li class="section1-header__item">Стоимость</li>
-              <li class="section1-header__item">Блог</li>
-              <li class="section1-header__item">Контакты</li>
-            </ul>
-            <button class="section1-header__button">Консультация</button>
-          </nav>
-          <div class="section1-menu__icon">
-            <span></span><span></span><span></span>
-          </div>
-        </header>
+    <header class="section1-header">
+      <img
+        src="../src/images/section1/logo.png"
+        alt="logo"
+        class="section1-header__logo"
+      />
+      <nav class="section1-header__nav" id="mobileMenu">
+        <button class="section1-menu__close" id="menuClose">×</button>
+        <ul class="section1-header__list">
+          <li class="section1-header__item"><a class="section1-a"  href="#">Главная</a></li>
+          <li class="section1-header__item"><a class="section1-a"  href="#">Про гида</a></li>
+          <li class="section1-header__item"><a class="section1-a"  href="#">Программа тура</a></li>
+          <li class="section1-header__item"><a class="section1-a"  href="#">Стоимость</a></li>
+          <li class="section1-header__item"><a class="section1-a" href="#">Блог</a></li>
+          <li class="section1-header__item"><a class="section1-a"  href="#">Контакты</a></li>
+        </ul>
+        <button class="section1-header__button">Консультация</button>
+      </nav>
+      <div class="section1-menu__icon" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
 
-        <h1 class="section1-title">
-          Насладитесь прогулкой в горах с командой единомышленников
-        </h1>
-        <form class="section1-form-container">
-          <div class="section1-form__group">
-            <select class="section1-form__select">
-              <option value="" disabled selected>Локация для тура</option>
-              <option value="altai">Алтай</option>
-              <option value="baikal">Байкал</option>
-              <option value="kamchatka">Камчатка</option>
-            </select>
-            <span class="section1-form__hint">выберите из списка</span>
-          </div>
+    <h1 class="section1-title">
+      Насладитесь прогулкой в горах с командой единомышленников
+    </h1>
 
-          <div class="section1-form__group">
-            <div class="section1-form__date-range-wrapper">
-              <input
-                type="date"
-                class="section1-form__date section1-input-left"
-              />
-              <input
-                type="date"
-                class="section1-form__date section1-input-right"
-              />
-            </div>
-            <span class="section1-form__hint">укажите диапазон</span>
-          </div>
+    <form class="section1-form-container" id="tourForm">
+      <div class="section1-form__group">
+        <select class="section1-form__select">
+          <option value="" disabled selected>Локация для тура</option>
+          <option value="altai">Алтай</option>
+          <option value="baikal">Байкал</option>
+          <option value="kamchatka">Камчатка</option>
+        </select>
+        <span class="section1-form__hint">выберите из списка</span>
+      </div>
 
-          <div class="section1-form__group">
-            <select
-              class="section1-form__select section1-form__select--participants"
-            >
-              <option value="" disabled selected>Участники</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6+</option>
-            </select>
-            <span class="section1-form__hint">минимум 4 человека</span>
-          </div>
-          <button type="submit" class="section1-form__button">
-            Найти программу
-          </button>
-        </form>
-      </section>
+      <div class="section1-form__group">
+        <div class="section1-form__date-range-wrapper">
+          <input type="date" class="section1-form__date section1-input-left" min=""/>
+          <input type="date" class="section1-form__date section1-input-right" min="" />
+        </div>
+        <span class="section1-form__hint">укажите диапазон</span>
+        </div>
+
+      <div class="section1-form__group">
+        <select class="section1-form__select section1-form__select--participants">
+          <option value="" disabled selected>Участники</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6+</option>
+        </select>
+        <span class="section1-form__hint">минимум 4 человека</span>
+      </div>
+      <button type="submit" class="section1-form__button">Найти программу</button>
+    </form>
+  </section>
 
       <section class="section-2">
         <div class="section-2-container">
@@ -645,33 +639,46 @@
                 <h3 class="footer-title">Наши услуги</h3>
                 <ul class="footer-list">
                   <li class="footer-list-item">
-                    <svg class="footer-arrow"></svg>
+                    <svg class="footer-arrow" width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.7154 4.6098L1.26527 0.159755C1.16235 0.0567475 1.02495 0 0.878448 0C0.731945 0 0.594548 0.0567475 0.491622 0.159755L0.163901 0.487394C-0.0493491 0.700889 -0.0493491 1.04788 0.163901 1.26105L3.90078 4.99793L0.159755 8.73895C0.0568288 8.84196 0 8.97928 0 9.1257C0 9.27228 0.0568288 9.4096 0.159755 9.51269L0.487476 9.84024C0.590483 9.94325 0.727799 10 0.874302 10C1.0208 10 1.1582 9.94325 1.26113 9.84024L5.7154 5.38613C5.81857 5.2828 5.87524 5.14484 5.87491 4.99817C5.87524 4.85094 5.81857 4.71305 5.7154 4.6098Z" fill="#FDFDFD"/>
+</svg>
+
                     <a class="footer-link" href="#">Прогулки в горы летом</a>
                   </li>
                   <li class="footer-list-item">
-                    <svg class="footer-arrow"></svg>
+                    <svg class="footer-arrow" width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.7154 4.6098L1.26527 0.159755C1.16235 0.0567475 1.02495 0 0.878448 0C0.731945 0 0.594548 0.0567475 0.491622 0.159755L0.163901 0.487394C-0.0493491 0.700889 -0.0493491 1.04788 0.163901 1.26105L3.90078 4.99793L0.159755 8.73895C0.0568288 8.84196 0 8.97928 0 9.1257C0 9.27228 0.0568288 9.4096 0.159755 9.51269L0.487476 9.84024C0.590483 9.94325 0.727799 10 0.874302 10C1.0208 10 1.1582 9.94325 1.26113 9.84024L5.7154 5.38613C5.81857 5.2828 5.87524 5.14484 5.87491 4.99817C5.87524 4.85094 5.81857 4.71305 5.7154 4.6098Z" fill="#FDFDFD"/>
+</svg>
                     <a class="footer-link" href="#">Зимние походы в горы </a>
                   </li>
                   <li class="footer-list-item">
-                    <svg class="footer-arrow"></svg>
+                    <svg class="footer-arrow" width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.7154 4.6098L1.26527 0.159755C1.16235 0.0567475 1.02495 0 0.878448 0C0.731945 0 0.594548 0.0567475 0.491622 0.159755L0.163901 0.487394C-0.0493491 0.700889 -0.0493491 1.04788 0.163901 1.26105L3.90078 4.99793L0.159755 8.73895C0.0568288 8.84196 0 8.97928 0 9.1257C0 9.27228 0.0568288 9.4096 0.159755 9.51269L0.487476 9.84024C0.590483 9.94325 0.727799 10 0.874302 10C1.0208 10 1.1582 9.94325 1.26113 9.84024L5.7154 5.38613C5.81857 5.2828 5.87524 5.14484 5.87491 4.99817C5.87524 4.85094 5.81857 4.71305 5.7154 4.6098Z" fill="#FDFDFD"/>
+</svg>
                     <a class="footer-link" href="#">
                       Посещение храмов в горах
                     </a>
                   </li>
                   <li class="footer-list-item">
-                    <svg class="footer-arrow"></svg>
+                    <svg class="footer-arrow" width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.7154 4.6098L1.26527 0.159755C1.16235 0.0567475 1.02495 0 0.878448 0C0.731945 0 0.594548 0.0567475 0.491622 0.159755L0.163901 0.487394C-0.0493491 0.700889 -0.0493491 1.04788 0.163901 1.26105L3.90078 4.99793L0.159755 8.73895C0.0568288 8.84196 0 8.97928 0 9.1257C0 9.27228 0.0568288 9.4096 0.159755 9.51269L0.487476 9.84024C0.590483 9.94325 0.727799 10 0.874302 10C1.0208 10 1.1582 9.94325 1.26113 9.84024L5.7154 5.38613C5.81857 5.2828 5.87524 5.14484 5.87491 4.99817C5.87524 4.85094 5.81857 4.71305 5.7154 4.6098Z" fill="#FDFDFD"/>
+</svg>
                     <a class="footer-link" href="#"
                       >Экстремальные виды туризма</a
                     >
                   </li>
                   <li class="footer-list-item">
-                    <svg class="footer-arrow"></svg>
+                    <svg class="footer-arrow" width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.7154 4.6098L1.26527 0.159755C1.16235 0.0567475 1.02495 0 0.878448 0C0.731945 0 0.594548 0.0567475 0.491622 0.159755L0.163901 0.487394C-0.0493491 0.700889 -0.0493491 1.04788 0.163901 1.26105L3.90078 4.99793L0.159755 8.73895C0.0568288 8.84196 0 8.97928 0 9.1257C0 9.27228 0.0568288 9.4096 0.159755 9.51269L0.487476 9.84024C0.590483 9.94325 0.727799 10 0.874302 10C1.0208 10 1.1582 9.94325 1.26113 9.84024L5.7154 5.38613C5.81857 5.2828 5.87524 5.14484 5.87491 4.99817C5.87524 4.85094 5.81857 4.71305 5.7154 4.6098Z" fill="#FDFDFD"/>
+</svg>
                     <a class="footer-link footer-link--new" href="#"
                       >Походы в джунглях Амазонии</a
                     >
                   </li>
                   <li class="footer-list-item">
-                    <svg class="footer-arrow"></svg>
+                    <svg class="footer-arrow" width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.7154 4.6098L1.26527 0.159755C1.16235 0.0567475 1.02495 0 0.878448 0C0.731945 0 0.594548 0.0567475 0.491622 0.159755L0.163901 0.487394C-0.0493491 0.700889 -0.0493491 1.04788 0.163901 1.26105L3.90078 4.99793L0.159755 8.73895C0.0568288 8.84196 0 8.97928 0 9.1257C0 9.27228 0.0568288 9.4096 0.159755 9.51269L0.487476 9.84024C0.590483 9.94325 0.727799 10 0.874302 10C1.0208 10 1.1582 9.94325 1.26113 9.84024L5.7154 5.38613C5.81857 5.2828 5.87524 5.14484 5.87491 4.99817C5.87524 4.85094 5.81857 4.71305 5.7154 4.6098Z" fill="#FDFDFD"/>
+</svg>
                     <a class="footer-link" href="#">Поездка в Африку</a>
                   </li>
                 </ul>
@@ -680,25 +687,33 @@
                 <h3 class="footer-title">Важно для путешествий</h3>
                 <ul class="footer-list">
                   <li class="footer-list-item">
-                    <svg class="footer-arrow"></svg>
+                    <svg class="footer-arrow" width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.7154 4.6098L1.26527 0.159755C1.16235 0.0567475 1.02495 0 0.878448 0C0.731945 0 0.594548 0.0567475 0.491622 0.159755L0.163901 0.487394C-0.0493491 0.700889 -0.0493491 1.04788 0.163901 1.26105L3.90078 4.99793L0.159755 8.73895C0.0568288 8.84196 0 8.97928 0 9.1257C0 9.27228 0.0568288 9.4096 0.159755 9.51269L0.487476 9.84024C0.590483 9.94325 0.727799 10 0.874302 10C1.0208 10 1.1582 9.94325 1.26113 9.84024L5.7154 5.38613C5.81857 5.2828 5.87524 5.14484 5.87491 4.99817C5.87524 4.85094 5.81857 4.71305 5.7154 4.6098Z" fill="#FDFDFD"/>
+</svg>
                     <a class="footer-link" href="#">
                       Как собрать в долгий поход?
                     </a>
                   </li>
                   <li class="footer-list-item">
-                    <svg class="footer-arrow"></svg>
+                    <svg class="footer-arrow" width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.7154 4.6098L1.26527 0.159755C1.16235 0.0567475 1.02495 0 0.878448 0C0.731945 0 0.594548 0.0567475 0.491622 0.159755L0.163901 0.487394C-0.0493491 0.700889 -0.0493491 1.04788 0.163901 1.26105L3.90078 4.99793L0.159755 8.73895C0.0568288 8.84196 0 8.97928 0 9.1257C0 9.27228 0.0568288 9.4096 0.159755 9.51269L0.487476 9.84024C0.590483 9.94325 0.727799 10 0.874302 10C1.0208 10 1.1582 9.94325 1.26113 9.84024L5.7154 5.38613C5.81857 5.2828 5.87524 5.14484 5.87491 4.99817C5.87524 4.85094 5.81857 4.71305 5.7154 4.6098Z" fill="#FDFDFD"/>
+</svg>
                     <a class="footer-link" href="#"
                       >Жизненно важные предметы для похода</a
                     >
                   </li>
                   <li class="footer-list-item">
-                    <svg class="footer-arrow"></svg>
+                    <svg class="footer-arrow" width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.7154 4.6098L1.26527 0.159755C1.16235 0.0567475 1.02495 0 0.878448 0C0.731945 0 0.594548 0.0567475 0.491622 0.159755L0.163901 0.487394C-0.0493491 0.700889 -0.0493491 1.04788 0.163901 1.26105L3.90078 4.99793L0.159755 8.73895C0.0568288 8.84196 0 8.97928 0 9.1257C0 9.27228 0.0568288 9.4096 0.159755 9.51269L0.487476 9.84024C0.590483 9.94325 0.727799 10 0.874302 10C1.0208 10 1.1582 9.94325 1.26113 9.84024L5.7154 5.38613C5.81857 5.2828 5.87524 5.14484 5.87491 4.99817C5.87524 4.85094 5.81857 4.71305 5.7154 4.6098Z" fill="#FDFDFD"/>
+</svg>
                     <a class="footer-link" href="#"
                       >Медицинская страховка, гарантия безопасности</a
                     >
                   </li>
                   <li class="footer-list-item">
-                    <svg class="footer-arrow"></svg>
+                    <svg class="footer-arrow" width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.7154 4.6098L1.26527 0.159755C1.16235 0.0567475 1.02495 0 0.878448 0C0.731945 0 0.594548 0.0567475 0.491622 0.159755L0.163901 0.487394C-0.0493491 0.700889 -0.0493491 1.04788 0.163901 1.26105L3.90078 4.99793L0.159755 8.73895C0.0568288 8.84196 0 8.97928 0 9.1257C0 9.27228 0.0568288 9.4096 0.159755 9.51269L0.487476 9.84024C0.590483 9.94325 0.727799 10 0.874302 10C1.0208 10 1.1582 9.94325 1.26113 9.84024L5.7154 5.38613C5.81857 5.2828 5.87524 5.14484 5.87491 4.99817C5.87524 4.85094 5.81857 4.71305 5.7154 4.6098Z" fill="#FDFDFD"/>
+</svg>
                     <a class="footer-link" href="#"
                       >Если вы врач - загляните сюда</a
                     >
@@ -720,6 +735,7 @@
         </div>
       </footer>
     </main>
+    <script type="module" src="../src/scripts/section1.js"></script>
     <script type="module" src="../src/scripts/section7.js"></script>
     <script type="module" src="../src/scripts/section4.js"></script>
     <script type="module" src="../src/scripts/section6.js"></script>

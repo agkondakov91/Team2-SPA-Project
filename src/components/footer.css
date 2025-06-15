@@ -43,6 +43,7 @@
   display: flex;
   justify-content: space-between;
   gap: 5px;
+  margin: 0 10px;
 }
 .footer-items:first-of-type {
   max-width: 480px;
@@ -117,6 +118,12 @@
   fill: #fff;
   transition: all 0.1s;
 }
+
+.footer-arrow:hover {
+  fill: #f2be22;
+  transition: all 0.1s;
+}
+
 .footer-link {
   position: relative;
   font-family: var(--font-family);
@@ -157,6 +164,8 @@
   justify-content: space-between;
   padding: 24px 0;
   gap: 8px;
+  margin-left: 10px;
+  margin-right: 20px;
 }
 .footer-info {
   margin: 0;
