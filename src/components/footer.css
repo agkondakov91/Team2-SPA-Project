@@ -118,6 +118,12 @@
   fill: #fff;
   transition: all 0.1s;
 }
+
+.footer-arrow:hover {
+  fill: #f2be22;
+  transition: all 0.1s;
+}
+
 .footer-link {
   position: relative;
   font-family: var(--font-family);
