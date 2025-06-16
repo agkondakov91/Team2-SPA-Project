@@ -1,75 +1,39 @@
-import { SERVER_URL_DATA } from "../../server/constants";
+document.addEventListener('DOMContentLoaded', function() {
 
-// Функция получения данных (замените на вашу реальную функцию)
-const getData = async (endpoint) => {
-  try {
-    const response = await fetch(endpoint);
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+  const locationSelect = document.querySelector('.section1-form__select');
+  const tourSubtitle = document.querySelector('.section-2-subtitle-data');
+  const tourTitle = document.querySelector('.section-2-title-data');
+  const tourDescription = document.querySelector('.section-2-description-data');
+
+  const tourData = { // Встроенные данные
+    "baikal": {
+      "titleSection2": "Открывайте для себя это уникальное озеро круглый год",
+      "subtitleSection2": "отдых на Байкале",
+      "tourStructure": "В зимних и летних обзорных путешествиях вы познакомитесь с природой Байкала, культурой и обычаями местных жителей. Вы побываете на единственном обитаемом острове — Ольхоне. Посетите священный мыс Бурхан и ледяные пещеры Малого Моря. Пройдетесь вдоль Кругобайкальской железной дороги. Увидите Сибирскую Швейцарию — Тункинскую долину. Мы подготовили зимние туры на Байкал, чтобы вы могли увидеть тот самый лед с пузырьками и трещинками, покататься на коньках на крупнейшем катке мира и необычно встретить Новый год. В активных турах вас ждут сплавы на льдине, наблюдение за байкальской нерпой, каякинг и сапбординг."
+    },
+    "altai": {
+      "titleSection2": "Открывайте для себя одно из самых таинственных мест России круглый год",
+      "subtitleSection2": "отдых на Алтае",
+      "tourStructure": "Насладитесь яркими красками в осенних турах. Вас ждут пешие прогулки, поездки на квадроциклах и джиппинг по знаковым местам Алтая. Понаблюдайте за пробуждением природы в весенних путешествиях. Вы прогуляетесь в окрестностях голубых озер и бурных рек. Увидите горные долины и живописные перевалы. Подготовили для вас летние мультиактивные туры со сплавами по горным рекам, джиппингом и вертолетными экскурсиями. Вы увидите красоту Алтая с разных ракурсов. Поживете в глэмпинге и экоотелях. Зимой вас ждут экскурсии к местам силы Алтайских гор. В свободные дни вы можете покататься на лыжах или сноуборде на горнолыжных курортах Манжерок и Белокуриха."
+    },
+    "kamchatka": {
+      "titleSection2": "Открывайте для себя край озер и рек круглый год",
+      "subtitleSection2": "отдых в Карелии",
+      "tourStructure": "Зимой вы можете отдохнуть в уютном глэмпинге на острове посреди Ладожских шхер. Прогуляться пешком по лесной тропе, побывать в питомнике ездовых собак и крепости Корела. Познакомиться с культурой местных жителей. Съездить на экскурсию в горный парк Рускеала. Мрамором, добытым здесь, облицованы дворцы Санкт-Петербурга. А еще здесь можно покатаеться на лыжах или отправиться на подледную рыбалку. Любители офф-роуда могут испытать себя на карельском бездорожье летом и зимой — прокатиться на квадроциклах и снегоходах. Весной, в сезон большой воды, попробуйте пройти пороги реки Шуя на рафтах. Мы подготовили для вас туры в Кижи и на Валаамский архипелаг. Познакомьтесь с православной культурой и уникальным деревянным зодчеством. В экспедиции на парусной яхте вы научитесь основам навигации, побываете на необитаемых островах Ладожского озера, насладитесь нетронутой природой."
     }
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error("Ошибка при получении данных:", error);
-    return { error: true, message: error.message };
-  }
-};
+  };
 
-const updateSection2 = (data, selectedLocation) => {
-  if (!data || !data.data || !data.data.dataSection1_2) {
-    console.error("Неверный формат данных для обновления второй секции.");
-    return;
-  }
+  locationSelect.addEventListener('change', function() {
+    const selectedLocation = locationSelect.value;
 
-  const tour = data.data.dataSection1_2.find(
-    (tour) => tour.tourName.toLowerCase() === selectedLocation.toLowerCase()
-  );
-
-  if (!tour) {
-    console.warn("Тур для локации", selectedLocation, "не найден.");
-    return;
-  }
-
-  document.querySelector(".section-2-title").textContent = tour.titleSection2;
-  document.querySelector(".section-2-subtitle").textContent = tour.subtitleSection2;
-  document.querySelector(".section-2-text").textContent = tour.tourDescription;
-
-  // Обновляем текст по кнопке
-  document.querySelector(".section-2-btn-tour").textContent = tour.tourStructure;
-
-  //Здесь можно добавить обновление картинок(если нужны):
-  // document.querySelector(".section-2-img-1").src = tour.image1Src;
-  // document.querySelector(".section-2-img-1").alt = tour.image1Alt;
-  // document.querySelector(".section-2-img-2").src = tour.image2Src;
-  // document.querySelector(".section-2-img-2").alt = tour.image2Alt;
-};
-
-document.addEventListener("DOMContentLoaded", () => {
-  const locationSelect = document.querySelector(".section1-form__select");
-
-  locationSelect.addEventListener("change", async (event) => {
-    const selectedLocation = event.target.value;
-    const data = await getData(SERVER_URL_DATA);
-
-    if (data.error) {
-      console.error("Ошибка при получении данных:", data.message);
-      return;
+    if (tourData[selectedLocation]) {
+      tourSubtitle.textContent = tourData[selectedLocation].subtitleSection2;
+      tourTitle.textContent = tourData[selectedLocation].titleSection2;
+      tourDescription.textContent = tourData[selectedLocation].tourStructure;
+    } else {
+      tourSubtitle.textContent = 'Информация о туре не найдена';
+      tourTitle.textContent = '';
+      tourDescription.textContent = '';
     }
-
-    updateSection2(data, selectedLocation);
   });
-
-  // Инициализация при загрузке страницы
-  (async () => {
-    const initialLocation = locationSelect.value;
-    const initialData = await getData(SERVER_URL_DATA);
-
-    if (initialData.error) {
-      console.error("Ошибка при получении начальных данных:", initialData.message);
-      return;
-    }
-
-    updateSection2(initialData, initialLocation);
-  })();
 });
-
