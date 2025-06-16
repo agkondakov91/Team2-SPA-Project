@@ -16,7 +16,7 @@
         class="section1-header__logo"
       />
       <nav class="section1-header__nav" id="mobileMenu">
-        <button class="section1-menu__close" id="menuClose">×</button>
+        <button class="section1-menu__close" id="menuClose">x</button>
         <ul class="section1-header__list">
           <li class="section1-header__item"><a class="section1-a"  href="#">Главная</a></li>
           <li class="section1-header__item"><a class="section1-a"  href="#">Про гида</a></li>
@@ -68,6 +68,17 @@
       </div>
       <button type="submit" class="section1-form__button">Найти программу</button>
     </form>
+
+    <div id="tourPopup" class="popup" style="display: none;">
+      <div class="popup__content" id="popupContent">
+        <button class="popup__close" id="popupClose">×</button>
+        <h2 id="popupTourName"></h2>
+        <p><strong>ID тура:</strong> <span id="popupTourId"></span></p>
+        <p><strong>Направление:</strong> <span id="popupDirName"></span></p>
+        <p><strong>Описание:</strong> <span id="popupDirDescription"></span></p>
+        <p><strong>Цена:</strong> <span id="popupDirPrice"></span></p>
+      </div>
+    </div>
   </section>
 
       <section class="section-2">
