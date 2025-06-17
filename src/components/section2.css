@@ -4,7 +4,7 @@
   font-weight: 400;
   font-size: 24px;
   line-height: 20px;
-  color: #f2be22;
+  color: var(--subtitle-color);
 }
 .section-2-title {
   margin: 0 0 40px;
@@ -12,7 +12,7 @@
   font-weight: 800;
   font-size: 32px;
   line-height: 120%;
-  color: #18121e;
+  color: var(--title-color);
 }
 .section-2-text {
   margin: 0 0 40px;
@@ -20,13 +20,13 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 150%;
-  color: #18121e;
+  color: var(--description-color);
 }
 .section-2-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #1a3e3e;
+  border: 1px solid var(--btn-color);
   border-radius: 4px;
   padding: 0;
   font-family: var(--font-family);
@@ -34,8 +34,8 @@
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.192px;
-  color: #fdfdfd;
-  background: #1a3e3e;
+  color: var(--btn-second-color);
+  background: var(--btn-color);
   transition: all 0.3s;
   cursor: pointer;
 }
@@ -103,7 +103,7 @@
 .section-2-video-svg {
   width: 15px;
   height: 15px;
-  fill: #1a3e3e;
+  fill: var(--btn-color);
   transition: transform 0.2s;
 }
 
