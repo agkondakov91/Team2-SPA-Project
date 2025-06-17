@@ -442,6 +442,18 @@
     "dataSection4": {
       "titleSection4": "Популярные направления",
       "subtitleSection4": "по версии путешественников"
+    },
+    "dataSection6": {
+      "titleSection6": "Делимся впечатлениями",
+      "subtitleSection6": "фото-отчет"
+    },
+    "gallery": {
+      "image1": "../src/images/section6/1.png",
+      "image2": "../src/images/section6/3.png",
+      "image3": "../src/images/section6/4.png",
+      "image4": "../src/images/section6/5.png",
+      "image5": "../src/images/section6/2.png",
+      "image6": "../src/images/section6/6.png"
     }
   },
   "blogs": {

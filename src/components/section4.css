@@ -168,6 +168,7 @@
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 16px;
+  margin-top: 10px;
 }
 
 .section4-button-rating {
@@ -201,8 +202,6 @@
   }
   .section4-photo-item-information-story {
     margin-bottom: 25px;
-  }
-  .section4-photo-item-information-price {
   }
 }
 
