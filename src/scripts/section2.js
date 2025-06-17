@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const tourTitle = document.querySelector('.section-2-title-data');
   const tourDescription = document.querySelector('.section-2-description-data');
 
-  const tourData = { // Встроенные данные для Section 2
+  const tourData = {
     "baikal": {
       "titleSection2": "Открывайте для себя это уникальное озеро круглый год",
       "subtitleSection2": "отдых на Байкале",
@@ -37,7 +37,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  //  Новый код для Popup
   const tourDetails = {
     "baikal": {
       "dirId": "D1",
@@ -69,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     "kamchatka": {
       "dirId": "K1",
-      "dirName": "Классическая Карелия", // Название Карелия, хотя привязано к Камчатке
+      "dirName": "Классическая Карелия",
       "dirPrice": "70 600 ₽",
       "dirDescription": "Мы подготовили для вас программу знакомства с заповедными уголками Карелии с необычным проживанием — в современном комфортном глэмпинге на острове в самом сердце Ладожских шхер. Днем вас ждут экскурсии, пешие и водные прогулки в сопровождении профессиональных гидов. А вечером — отдых в уютных шатрах-полусферах в окружении соснового леса, звездное небо над Ладогой и дегустация блюд карельской кухни в изысканной подаче. Программа понравится любителям комфортного экскурсионного отдыха. Переезды будут минимальными, а экскурсии позволят в полном объеме познакомиться с главными природными и историческими достопримечательностями Карелии.",
       "dirProgram": [
@@ -80,10 +79,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   };
 
-  // Получаем кнопку "Программа тура"
   const tourProgramButton = document.querySelector('.section-2-btn-tour');
 
-  // Функция для создания и отображения popup
   function showTourProgram(location) {
     const selectedTour = tourDetails[location];
 
@@ -92,15 +89,14 @@ document.addEventListener('DOMContentLoaded', function() {
       return;
     }
 
-    // Создаем элементы popup
     const popup = document.createElement('div');
-    popup.classList.add('popup-section-2'); // Добавьте класс для стилизации
+    popup.classList.add('popup-section-2');
 
     const popupContent = document.createElement('div');
-    popupContent.classList.add('popup-content-section-2'); // Добавьте класс для стилизации
+    popupContent.classList.add('popup-content-section-2');
 
     const closeButton = document.createElement('button');
-    closeButton.classList.add('popup-close-section-2'); // Добавьте класс для стилизации
+    closeButton.classList.add('popup-close-section-2');
     closeButton.textContent = '×';
     closeButton.addEventListener('click', () => {
       document.body.removeChild(popup);
@@ -121,20 +117,17 @@ document.addEventListener('DOMContentLoaded', function() {
       programList.appendChild(listItem);
     });
 
-    // Собираем popup
     popupContent.appendChild(closeButton);
     popupContent.appendChild(title);
     popupContent.appendChild(description);
     popupContent.appendChild(programList);
     popup.appendChild(popupContent);
 
-    // Добавляем popup в body
     document.body.appendChild(popup);
   }
 
-  // Обработчик события для кнопки "Программа тура"
   tourProgramButton.addEventListener('click', function(event) {
-    event.preventDefault(); // Предотвращаем переход по ссылке
+    event.preventDefault();
     const selectedLocation = locationSelect.value;
     showTourProgram(selectedLocation);
   });
