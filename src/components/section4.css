@@ -124,6 +124,15 @@
   font-size: 16px;
   line-height: 150%;
   margin-bottom: 80px;
+
+  min-height: 170px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+  word-break: break-word;
 }
 
 .section4-photo-item-information h2 {
@@ -144,7 +153,7 @@
   color: var(--color-white);
   background-color: var(--color-white30);
   border-radius: 4px;
-  height: 40px;
+  height: 45px;
   width: 86px;
   display: flex;
   align-items: center;
@@ -192,6 +201,8 @@
   }
   .section4-photo-item-information-story {
     margin-bottom: 25px;
+  }
+  .section4-photo-item-information-price {
   }
 }
 
