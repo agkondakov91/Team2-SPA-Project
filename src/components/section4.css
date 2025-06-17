@@ -153,7 +153,7 @@
   color: var(--color-white);
   background-color: var(--color-white30);
   border-radius: 4px;
-  height: 40px;
+  height: 45px;
   width: 86px;
   display: flex;
   align-items: center;
@@ -201,6 +201,8 @@
   }
   .section4-photo-item-information-story {
     margin-bottom: 25px;
+  }
+  .section4-photo-item-information-price {
   }
 }
 
