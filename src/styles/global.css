@@ -1,6 +1,19 @@
 :root {
   --font-family: 'Nunito Sans', sans-serif;
   --second-family: 'NEXT ART', sans-serif;
+
+  --bg-first-color: #ffffff;
+  --bg-color-2: #f3f5f4;
+  --btn-color: #1a3e3e;
+  --btn-second-color: #fdfdfd;
+  --text-second-color: #fdfdfd;
+  --form-text-color: #E1E3E4;
+  --subtitle-color: #f2be22;
+  --hover-color: #f2be22;
+  --title-color: #18121e;
+  --description-color: #18121e;
+  --bg-bottom-footer-color: #18121e;
+  --bg-icon-color: #FDFDFD66;
 }
 
 *,
