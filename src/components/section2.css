@@ -4,7 +4,7 @@
   font-weight: 400;
   font-size: 24px;
   line-height: 20px;
-  color: #f2be22;
+  color: var(--subtitle-color);
 }
 .section-2-title {
   margin: 0 0 40px;
@@ -12,7 +12,7 @@
   font-weight: 800;
   font-size: 32px;
   line-height: 120%;
-  color: #18121e;
+  color: var(--title-color);
 }
 .section-2-text {
   margin: 0 0 40px;
@@ -20,13 +20,13 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 150%;
-  color: #18121e;
+  color: var(--description-color);
 }
 .section-2-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #1a3e3e;
+  border: 1px solid var(--btn-color);
   border-radius: 4px;
   padding: 0;
   font-family: var(--font-family);
@@ -34,8 +34,8 @@
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.192px;
-  color: #fdfdfd;
-  background: #1a3e3e;
+  color: var(--btn-second-color);
+  background: var(--btn-color);
   transition: all 0.3s;
   cursor: pointer;
 }
@@ -103,7 +103,7 @@
 .section-2-video-svg {
   width: 15px;
   height: 15px;
-  fill: #1a3e3e;
+  fill: var(--btn-color);
   transition: transform 0.2s;
 }
 
@@ -155,4 +155,82 @@
     width: 176px;
     height: 44px;
   }
+    .popup-content-section-2 {
+    width: 95%;
+    max-width: none;
+    padding: 10px;
+  }
+
+  .popup-close-section-2 {
+    top: 5px;
+    right: 5px;
+    font-size: 16px;
+  }
+
+  .popup-content-section-2 h3 {
+    font-size: 16px;
+  }
+
+  .popup-content-section-2 p,
+  .popup-content-section-2 li {
+    font-size: 15px;
+    line-height: 1.2;
+  }
+}
+
+.popup-section-2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content-section-2 {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+}
+
+.popup-close-section-2 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Стили для списка (ul) */
+.popup-content-section-2 ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  text-align: center;
+}
+
+/* Стили для элементов списка (li) */
+.popup-content-section-2 li {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: #18121e;
+  margin-bottom: 10px;
+}
+
+/* Дополнительно, чтобы убрать отступ у последнего элемента списка */
+.popup-content-section-2 li:last-child {
+  margin-bottom: 0;
 }

@@ -1,8 +1,6 @@
 :root {
   --section7-color-white: #ffffff;
   --section7-color-grey: #E1E3E4;
-  --section7-color-yellow: #F2BE21;
-  --section7-color-btn: #1A3E3E;
   --section7-color-white-70: rgba(255, 255, 255, 0.7);
   --section7-font-size-base: 16px;
   --section7-padding-md: 12px;
@@ -17,7 +15,7 @@
   max-width: 1180px;
   height: 196px;
   margin: 0 auto;
-  background-color: var(--section7-color-white);
+  background-color: var(--bg-first-color);
   border: none;
   box-shadow: 0 0 15px 0 rgba(24,18,30,.12);
   border-radius: var(--section7-radius-md);
@@ -30,7 +28,7 @@
 }
 
 .section7-p {
-  color: var(--section7-color-yellow);
+  color: var(--subtitle-color);
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 18px;
@@ -84,8 +82,8 @@
   width: 240px;
   height: 44px;
   font-size: 16px;
-  color: var(--section7-color-white);
-  background-color: var(--section7-color-btn);
+  color: var(--btn-second-color);
+  background-color: var(--btn-color);
   border: none;
   border-radius: 4px;
   font-family: var(--font-family);
@@ -95,12 +93,12 @@
 }
 .section7-button:hover {
   background-color: var(--section7-color-white-70);
-  color: var(--section7-color-btn);
-  border: 1px solid var(--section7-color-btn);
+  color: var(--btn-color);
+  border: 1px solid var(--btn-color);
 }
 
 .section7-p-terms {
-  color: #000;
+  color: var(--description-color);
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 14px;

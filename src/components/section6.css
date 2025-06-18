@@ -2,9 +2,6 @@
   --color-white20: rgba(255, 255, 255, 0.2);
   --color-white30: rgba(255, 255, 255, 0.3);
   --color-white40: rgba(253, 253, 253, 0.4);
-  --color-white: rgba(253, 253, 253, 1);
-  --color-button: rgba(26, 62, 62, 1);
-  --color-yellow: #f2be22;
 }
 
 .section6-container {
@@ -21,7 +18,7 @@
   align-items: center;
 }
 .section6-title1 {
-  color: var(--color-yellow);
+  color: var(--hover-color);
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 24px;
@@ -90,8 +87,8 @@
 }
 
 .section6-button {
-  background-color: var(--color-button);
-  color: var(--color-white);
+  background-color: var(--btn-color);
+  color: var(--btn-second-color);
   border-radius: 4px;
   border: none;
   transition: background-color 0.3s linear;
@@ -102,9 +99,9 @@
 }
 
 .section6-button:hover {
-  background-color: var(--color-white);
-  color: var(--color-button);
-  border: var(--color-button) solid 1px;
+  background-color: var(--btn-second-color);
+  color: var(--btn-color);
+  border: var(--btn-color) solid 1px;
 }
 
 @media (max-width: 735px) {

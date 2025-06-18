@@ -1,34 +1,9 @@
-:root {
-  --f-button-width: 40px;
-  --f-button-height: 40px;
-  --f-button-border: 0;
-  --f-button-border-radius: 0;
-  --f-button-color: #374151;
-  --f-button-bg: #f8f8f8;
-  --f-button-hover-bg: #e0e0e0;
-  --f-button-active-bg: #d0d0d0;
-  --f-button-shadow: none;
-  --f-button-transition: all 0.15s ease;
-  --f-button-transform: none;
-  --f-button-svg-width: 20px;
-  --f-button-svg-height: 20px;
-  --f-button-svg-stroke-width: 1.5;
-  --f-button-svg-fill: none;
-  --f-button-svg-filter: none;
-  --f-button-svg-disabled-opacity: 0.65;
-  --f-spinner-width: 36px;
-  --f-spinner-height: 36px;
-  --f-spinner-color-1: rgba(0, 0, 0, 0.1);
-  --f-spinner-color-2: rgba(17, 24, 28, 0.8);
-  --f-spinner-stroke: 2.75;
-}
-
 .a-tag {
   text-decoration: none;
   color: inherit;
 }
 .footer {
-  background-color: #1a3e3e;
+  background-color: var(--btn-color);
   width: 100vw;
 }
 .footer-top {
@@ -43,6 +18,7 @@
   display: flex;
   justify-content: space-between;
   gap: 5px;
+  margin: 0 10px;
 }
 .footer-items:first-of-type {
   max-width: 480px;
@@ -57,7 +33,7 @@
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
-  color: #f3f5f4;
+  color: var(--text-second-color);
 }
 .footer-text {
   margin: 0;
@@ -65,7 +41,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  color: #fff;
+  color: var(--text-second-color);
 }
 .footer-contacts {
   display: flex;
@@ -78,7 +54,7 @@
   font-size: 14px;
   line-height: 18px;
   text-decoration: underline;
-  color: #fff;
+  color: var(--text-second-color);
   transition: all 0.1s;
 }
 .footer-socials {
@@ -91,11 +67,11 @@
 .footer-social {
   width: 26px;
   height: 26px;
-  fill: #fff;
+  fill: var(--text-second-color);
   transition: all 0.1s;
 }
 .footer-social:hover {
-  fill: #f2be22;
+  fill: var(--hover-color);
   transition: all 0.1s;
 }
 .footer-list {
@@ -114,9 +90,15 @@
   margin-right: 10px;
   width: 6px;
   height: 10px;
-  fill: #fff;
+  fill: var(--text-second-color);
   transition: all 0.1s;
 }
+
+.footer-arrow:hover {
+  fill: var(--hover-color);
+  transition: all 0.1s;
+}
+
 .footer-link {
   position: relative;
   font-family: var(--font-family);
@@ -125,7 +107,7 @@
   line-height: 18px;
   -webkit-text-decoration: underline 1px solid rgba(0, 0, 0, 0);
   text-decoration: underline 1px solid rgba(0, 0, 0, 0);
-  color: #fdfdfd;
+  color: var(--text-second-color);
   transition: all 0.1s;
 }
 .footer-link--new::after {
@@ -137,19 +119,19 @@
   font-weight: 700;
   font-size: 12px;
   line-height: 16px;
-  -webkit-text-decoration: underline 1px solid #fff;
-  text-decoration: underline 1px solid #fff;
+  -webkit-text-decoration: underline 1px solid var(--text-second-color);
+  text-decoration: underline 1px solid var(--text-second-color);
   text-transform: lowercase;
-  color: #1a3e3e;
-  background: #fff;
+  color: var(--btn-color);
+  background: var(--text-second-color);
 }
 .footer-bottom {
   font-family: var(--font-family);
   font-weight: 600;
   font-size: 14px;
   line-height: 18px;
-  color: #fff;
-  background-color: #18121e;
+  color: var(--text-second-color);
+  background-color: var(--bg-bottom-footer-color);
 }
 .footer-bottom-wrapper {
   display: flex;
@@ -157,14 +139,16 @@
   justify-content: space-between;
   padding: 24px 0;
   gap: 8px;
+  margin-left: 10px;
+  margin-right: 20px;
 }
 .footer-info {
   margin: 0;
 }
 .footer-info:hover {
-  -webkit-text-decoration: underline 1px solid #f2be22;
-  text-decoration: underline 1px solid #f2be22;
-  color: #f2be22;
+  -webkit-text-decoration: underline 1px solid var(--hover-color);
+  text-decoration: underline 1px solid var(--hover-color);
+  color: var(--hover-color);
 }
 .footer-policy {
   margin: 0;
@@ -197,13 +181,13 @@
 }
 
 .footer-list-item:hover .footer-link {
-  -webkit-text-decoration: underline 1px solid #f2be22;
-  text-decoration: underline 1px solid #f2be22;
-  color: #f2be22;
+  -webkit-text-decoration: underline 1px solid var(--hover-color);
+  text-decoration: underline 1px solid var(--hover-color);
+  color: var(--hover-color);
 }
 
 .footer-contact:hover {
-  -webkit-text-decoration: underline 1px solid #f2be22;
-  text-decoration: underline 1px solid #f2be22;
-  color: #f2be22;
+  -webkit-text-decoration: underline 1px solid var(--hover-color);
+  text-decoration: underline 1px solid var(--hover-color);
+  color: var(--hover-color);
 }
