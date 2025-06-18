@@ -1,6 +1,4 @@
 :root {
-  --color-white: #ffffff;
-  --color-grey: #E1E3E4;
   --color-white-70: rgba(255, 255, 255, 0.7);
   --font-size-base: 16px;
   --padding-md: 12px;
@@ -23,7 +21,7 @@
   display: flex;
   position: relative;
   flex-direction: row;
-  color: var(--color-white);
+  color: var(--text-main-color);
   margin: 0 auto;
   padding: 10px;
   font-size: 18px;
@@ -49,12 +47,13 @@
 }
 
 .section1-a {
-  color: var(--color-white);
+  color: var(--text-main-color);
   text-decoration: none;
+  transition: all 0.1s;
 }
 
 .section1-a:hover {
-  color: #F2BE21;
+  color: var(--hover-color);
 }
 
 .section1-header__list {
@@ -72,8 +71,8 @@
 
 .section1-header__button {
   margin-left: 32px;
-  background-color: #1A3E3E;
-  color: var(--color-white);
+  background-color: var(--btn-color);
+  color: var(--text-main-color);
   border: none;
   border-radius: 5px;
   text-align: center;
@@ -87,14 +86,14 @@
 }
 
 .section1-header__button:hover {
-  background-color: var(--color-white);
-  color: #1b1b1b;
-  border: solid 1px var(--color-white);
+  background-color: var(--text-main-color);
+  color: var(--title-color);
+  border: solid 1px var(--text-main-color);
   transition: all 0.3s ease;
 }
 
 .section1-header__item:hover {
-  color: #F2BE21;
+  color: var(--hover-color);
 }
 
 .section1-menu__icon {
@@ -103,7 +102,7 @@
 
 .section1-title {
   display: flex;
-  color: var(--color-white);
+  color: var(--text-main-color);
   font-family: var(--second-family);
   font-weight: 700;
   font-size: 50px;
@@ -144,7 +143,7 @@
 }
 
 .section1-form__label {
-  color: var(--color-grey);
+  color: var(--form-text-color);
   font-weight: bold;
   margin-bottom: 8px;
 }
@@ -153,8 +152,8 @@
 .section1-form__select,
 .section1-form__date {
   background: transparent;
-  border: 2px solid var(--color-grey);
-  color: var(--color-white);
+  border: 2px solid var(--form-text-color);
+  color: var(--text-main-color);
   border-radius: var(--radius-md);
   padding: var(--padding-md);
   font-size: var(--font-size-base);
@@ -164,13 +163,13 @@
 .section1-form__input::placeholder,
 .section1-form__select,
 .section1-form__date {
-  color: var(--color-grey);
+  color: var(--form-text-color);
   font-family: var(--font-family);
   font-weight: 400;
 }
 
 .section1-form__hint {
-  color: var(--color-grey);
+  color: var(--form-text-color);
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 14px;
@@ -180,13 +179,13 @@
 }
 
 .section1-form__button {
-  background: var(--color-white);
+  background: var(--text-main-color);
   color: #1b1b1b;
   padding: 16px 32px;
   font-family: var(--font-family);
   font-weight: bold;
   font-size: 16px;
-  border: solid 1px var(--color-white);
+  border: solid 1px var(--text-main-color);
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -195,9 +194,9 @@
 }
 
 .section1-form__button:hover {
-  background: #1A3E3E;
-  color: var(--color-white);
-  border: solid 1px var(--color-white);
+  background: var(--btn-color);
+  color: var(--text-main-color);
+  border: solid 1px var(--text-main-color);
 }
 
 .section1-form__date-range {
@@ -207,7 +206,7 @@
 
 .section1-form__date-range-wrapper {
   display: flex;
-  border: 2px solid var(--color-grey);
+  border: 2px solid var(--form-text-color);
   border-radius: var(--radius-lg);
   overflow: hidden;
   background: transparent;
@@ -215,7 +214,7 @@
 
 .section1-form__date {
   background: transparent;
-  color: var(--color-grey);
+  color: var(--form-text-color);
   padding: 12px 5px;
   font-size: var(--font-size-base);
   border: none;
@@ -259,7 +258,7 @@
   }
 
   .section1-header__list .section1-a:hover {
-  color: #F2BE21;
+  color: var(--hover-color);
   }
 
 
@@ -271,7 +270,7 @@
     gap: 10px;
   }
   .section1-header__nav .section1-a {
-    color: white;
+    color: var(--bg-first-color);
     font-size: 18px;
   }
   .section1-menu__icon {
@@ -287,7 +286,7 @@
   }
   .section1-menu__icon span {
     height: 3px;
-    background-color: var(--color-white);
+    background-color: var(--text-main-color);
     border-radius: 1px;
     transition: all 0.3s ease-in-out;
   }
@@ -444,7 +443,7 @@ body.dis-scroll {
     transform: rotate(-90deg);
   }
   .section1-header__nav .section1-a {
-    color: white;
+    color: var(--bg-first-color);
     font-size: 18px;
     position: relative;
     transition: color 0.3s;
@@ -457,7 +456,7 @@ body.dis-scroll {
   left: 0;
   bottom: -4px;
   height: 2px;
-  background: #F2BE21;
+  background: var(--hover-color);
   width: 0;
   transition: width 0.3s ease;
   }
@@ -479,7 +478,7 @@ body.dis-scroll {
 
 .section1-menu__icon span {
   height: 3px;
-  background: white;
+  background: var(--bg-first-color);
   border-radius: 2px;
   transition: all 0.3s ease-in-out;
 }
@@ -516,7 +515,7 @@ body.dis-scroll {
   background: none;
   border: none;
   font-size: 32px;
-  color: white;
+  color: var(--bg-first-color);
   cursor: pointer;
   z-index: 1001;
   display: none;
