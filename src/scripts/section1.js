@@ -17,7 +17,7 @@ const renderTitles = async () => {
 
 renderTitles();
 
-document.getElementById('tourForm').addEventListener('submit', function (e) {
+document.getElementById('section1-tourForm').addEventListener('submit', function (e) {
   e.preventDefault();
 
   const location = document.querySelector('.section1-form__select').value;
@@ -54,13 +54,13 @@ const openPopup = async () => {
   const tour = data.dataSection1_2[0];
   const direction = tour.tourDirections[0];
 
-  document.getElementById('popupTourId').textContent = tour.tourId;
-  document.getElementById('popupTourName').textContent = tour.tourName;
-  document.getElementById('popupDirName').textContent = direction.dirName;
-  document.getElementById('popupDirPrice').textContent = direction.dirPrice;
-  document.getElementById('popupDirDescription').textContent = direction.dirDescription;
+  document.getElementById('section1-popupTourName').textContent = tour.tourName;
+  document.getElementById('section1-popupTourId').textContent = tour.tourId;
+  document.getElementById('section1-popupDirName').textContent = direction.dirName;
+  document.getElementById('section1-popupDirPrice').textContent = direction.dirPrice;
+  document.getElementById('section1-popupDirDescription').textContent = direction.dirDescription;
 
-  document.getElementById('tourPopup').style.display = 'flex';
+  document.getElementById('section1-tourPopup').style.display = 'flex';
 };
 
 // Открытие попапа по клику на кнопку
@@ -71,12 +71,12 @@ document
 
 // Закрытие по кнопке
 function closePopup() {
-  document.getElementById('tourPopup').style.display = 'none';
+  document.getElementById('section1-tourPopup').style.display = 'none';
 }
 
 // Закрытие по клику вне окна
 function overlayClose(event) {
-  const content = document.getElementById('popupContent');
+  const content = document.getElementById('section1-popupContent');
   if (!content.contains(event.target)) {
     closePopup();
   }
@@ -90,5 +90,5 @@ document.addEventListener('keydown', function (event) {
 });
 
 // Обработчики событий для закрытия попапа
-document.getElementById('tourPopup').addEventListener('click', overlayClose);
-document.getElementById('popupClose').addEventListener('click', closePopup);
+document.getElementById('section1-tourPopup').addEventListener('click', overlayClose);
+document.getElementById('section1-popupClose').addEventListener('click', closePopup);
