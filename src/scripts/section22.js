@@ -33,98 +33,71 @@ locationSelect.addEventListener('change', function() {
     }
   });
 
-  const tourDetails = {
-    "baikal": {
-      "dirId": "D1",
-      "dirName": "По большой Байкальской тропе",
-      "dirPrice": "100 400 ₽",
-      "dirDescription": "В путешествии вы два дня побудете настоящими скаутами: пройдете по экотропе национального парка вдоль великого озера, переночуете в палатках и будете готовить еду на костре. Вас ждет настоящий поход, поэтому вещи и спальные мешки вы понесете самостоятельно. Программа разработана для семей с детьми от пяти лет — в походе не будет длительных треккингов и сложного рельефа с перепадом высот. А завершите вы его непродолжительным сплавом по Ангаре — здесь спокойное течение, даже дети легко осилят маршрут. А также в туре будут интересные как детям, так и взрослым лекции и купание в прохладных водах Байкала.",
-      "dirProgram": [
-        { "id": 1, "name": "Обзорная экскурсия по Иркутску." },
-        { "id": 2, "name": "Начало похода по Большой Байкальской тропе вдоль озера до кордона национального парка (16 км пешком)." },
-        { "id": 3, "name": "Продолжение похода вдоль западного берега Байкала, посетите мыс Соболева, «Чертов мост» и мыс шкипер. (9 км пешком)." },
-        { "id": 4, "name": "Финальная часть похода - поселок Большие Коты, где вас ждет экскурсия в музее байкаловедения, затем на катере доберетесь до поселка Листвянка. (4 км пешком и 20 км на катере))." },
-        { "id": 5, "name": "Мастер-класс по сбору байдарок и сплав по ангаре до поселка Большая Речка." },
-        { "id": 6, "name": "Посещение музея под открытым небом «Тальцы»." },
-        { "id": 7, "name": "Экскурсия с интерактивный программой «Сибирские забавы»." }
-      ]
-    },
-    "altai": {
-      "dirId": "A1",
-      "dirName": "Алтайские горизонты",
-      "dirPrice": "66 700 ₽",
-      "dirDescription": "За время путешествия по Горному Алтаю вы увидите красоты Чуйского тракта, спуститесь в долину Чулышмана и пройдете к водопаду Куркуре. Поднимитесь к леднику Большой Актру и, если позволит физическая подготовка, то увидите Голубое озеро на высоте 2840 метров. Вас ждет ежедневный треккинг до 15 км и переезды до 400 км по горным дорогам. Вы будете жить в туристических комплексах с удобствами, в окружении гор и долин.",
-      "dirProgram": [
-        { "id": 1, "name": "Размещение в туркомплексе возле села Чибит." },
-        { "id": 2, "name": "Экскурсия в долину Чульшмана и водопад Куркуре." },
-        { "id": 3, "name": "Куектанарске озера." },
-        { "id": 4, "name": "Трекинг к языку ледника Большой Актру." },
-        { "id": 5, "name": "Чуйский тракт и Алтайский Марс." }
-      ]
-    },
-    "kamchatka": {
-      "dirId": "K1",
-      "dirName": "Классическая Карелия",
-      "dirPrice": "70 600 ₽",
-      "dirDescription": "Мы подготовили для вас программу знакомства с заповедными уголками Карелии с необычным проживанием — в современном комфортном глэмпинге на острове в самом сердце Ладожских шхер. Днем вас ждут экскурсии, пешие и водные прогулки в сопровождении профессиональных гидов. А вечером — отдых в уютных шатрах-полусферах в окружении соснового леса, звездное небо над Ладогой и дегустация блюд карельской кухни в изысканной подаче. Программа понравится любителям комфортного экскурсионного отдыха. Переезды будут минимальными, а экскурсии позволят в полном объеме познакомиться с главными природными и историческими достопримечательностями Карелии.",
-      "dirProgram": [
-        { "id": 1, "name": "Остров-заповедник Кижи." },
-        { "id": 2, "name": "Валаамский архипелаг." },
-        { "id": 3, "name": "Ладожские шхеры и горный парк «Рускеала»" }
-      ]
-    }
-  };
-
 
 const tourProgramButton = document.querySelector('.section-2-btn-tour');
 
 function showTourProgram(location) {
-    const selectedTour = tourDetails[location];
+  const popup = document.createElement('div');
+  popup.classList.add('popup-section-2');
 
-    if (!selectedTour) {
-      alert('Информация о программе тура для выбранной локации не найдена.');
-      return;
-    }
+  const popupContent = document.createElement('div');
+  popupContent.classList.add('popup-content-section-2');
 
-    const popup = document.createElement('div');
-    popup.classList.add('popup-section-2');
+  const closeButton = document.createElement('button');
+  closeButton.classList.add('popup-close-section-2');
+  closeButton.textContent = '×';
+  closeButton.addEventListener('click', () => {
+    document.body.removeChild(popup);
+  });
 
-    const popupContent = document.createElement('div');
-    popupContent.classList.add('popup-content-section-2');
+  let tourName = '';
+  let tourDescription = '';
+  let dirProgram = [];
 
-    const closeButton = document.createElement('button');
-    closeButton.classList.add('popup-close-section-2');
-    closeButton.textContent = '×';
-    closeButton.addEventListener('click', () => {
-      document.body.removeChild(popup);
-    });
+  if (location === 'altai') {
+    tourName = data.dataSection1_2[1].tourDirections[0].dirName;
+    tourDescription = data.dataSection1_2[1].tourDirections[0].dirDescription;
+    dirProgram = data.dataSection1_2[1].tourDirections[0].dirProgram;
+  } else if (location === 'baikal') {
+    tourName = data.dataSection1_2[0].tourDirections[0].dirName;
+    tourDescription = data.dataSection1_2[0].tourDirections[0].dirDescription;
+    dirProgram = data.dataSection1_2[0].tourDirections[0].dirProgram;
+  } else if (location === 'kamchatka') {
+    tourName = data.dataSection1_2[2].tourDirections[0].dirName;
+    tourDescription = data.dataSection1_2[2].tourDirections[0].dirDescription;
+    dirProgram = data.dataSection1_2[2].tourDirections[0].dirProgram;
+  } else {
+    tourName = 'Информация о туре не найдена';
+    tourDescription = '';
+    dirProgram = [];
+  }
 
-    const title = document.createElement('h3');
-    title.classList.add('section-2-title');
-    title.textContent = selectedTour.dirName;``
+  const title = document.createElement('h3');
+  title.classList.add('section-2-title');
+  title.textContent = tourName;
 
-    const description = document.createElement('p');
-    description.classList.add('section-2-text')
-    description.textContent = selectedTour.dirDescription;
+  const description = document.createElement('p');
+  description.classList.add('section-2-text');
+  description.textContent = tourDescription;
 
-    const programList = document.createElement('ul');
-    selectedTour.dirProgram.forEach(item => {
-      const listItem = document.createElement('li');
-      listItem.textContent = item.name;
-      programList.appendChild(listItem);
-    });
+  const programList = document.createElement('ul');
+  dirProgram.forEach(item => {
+    const listItem = document.createElement('li');
+    listItem.textContent = item.name;
+    programList.appendChild(listItem);
+  });
 
-    popupContent.appendChild(closeButton);
-    popupContent.appendChild(title);
-    popupContent.appendChild(description);
-    popupContent.appendChild(programList);
-    popup.appendChild(popupContent);
+  popupContent.appendChild(closeButton);
+  popupContent.appendChild(title);
+  popupContent.appendChild(description);
+  popupContent.appendChild(programList);
+  popup.appendChild(popupContent);
 
-    document.body.appendChild(popup);
+  document.body.appendChild(popup);
 }
 
 tourProgramButton.addEventListener('click', function(event) {
-    event.preventDefault();
-    const selectedLocation = locationSelect.value;
-    showTourProgram(selectedLocation);
+  event.preventDefault();
+  const selectedLocation = locationSelect.value;
+  showTourProgram(selectedLocation);
 });
