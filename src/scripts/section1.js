@@ -92,3 +92,4 @@ document.addEventListener('keydown', function (event) {
 // Обработчики событий для закрытия попапа
 document.getElementById('section1-tourPopup').addEventListener('click', overlayClose);
 document.getElementById('section1-popupClose').addEventListener('click', closePopup);
+
